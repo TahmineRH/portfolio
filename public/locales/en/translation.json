@@ -1,0 +1,22 @@
+{
+  "name": "Hey, I'm Tahmine",
+  "intro": "a front-end developer focused on building scalable and maintainable web interfaces. I mostly work with React and Next.js, and I care deeply about clean architecture, performance, and a good developer experience. My goal is to bridge design and engineering by crafting UI that’s both intuitive and technically sound.",
+  "projects": "Projects",
+  "about": "More About me",
+  "childhood": {
+    "title": "Childhood",
+    "paragraph": "My childhood was full of simple games and a quiet curiosity. I used to love puzzles—not just for fun, but because I wanted to understand how things fit together. I spent a lot of time playing with my cousins, creating our own little worlds. My dad encouraged me with small, confident words. My mom was always gently present, paying attention in ways I didn’t fully realize at the time. Looking back, I see how much of who I am was quietly built during those years."
+  },
+  "adolescence": {
+    "title": "Adolescence",
+    "paragraph": "In my teens, I spent most of my time reading books and watching films. Real life often felt distant, but stories made sense to me. I was the kind of kid who thought a lot, asked quiet questions. School wasn’t just about grades—I saw it as a way to figure out who I was and how the world worked. I might’ve seemed quiet on the outside, but inside, my thoughts were always moving."
+  },
+  "university": {
+    "title": "University",
+    "paragraph": "University brought a turn I didn’t expect. I never planned to go into programming—had no background, no big goal. But somehow, that’s where I ended up. I started from scratch and slowly found my way. I became one of the top students, not just because of grades, but because I really wanted to understand. Most of what I learned came from outside the classroom—from trying, failing, figuring things out on my own."
+  },
+  "now": {
+    "title": "Now",
+    "paragraph": "Now, I work as a developer. Every day brings new problems to solve, and I’m still learning. It’s not always easy—some days are exhausting—but the feeling of progress and growth is something I really value. When I look back at how it all unfolded, I realize nothing was random. Every step, even the uncertain ones, helped shape who I’ve become."
+  }
+}

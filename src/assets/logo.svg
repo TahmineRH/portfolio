@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32" fill="currentColor">
+  <g font-family="Arial, sans-serif" font-weight="bold" text-anchor="middle">
+    <text x="32" y="38" font-size="32">T</text>
+    <text x="48" y="54" font-size="28" transform="rotate(-20 48 54)">R</text>
+  </g>
+</svg>

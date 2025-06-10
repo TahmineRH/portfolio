@@ -1,0 +1,296 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+html.lang-fa {
+  font-family: "PlaypenSansArabic", system-ui, sans-serif;
+}
+
+:root {
+  font-family: "Grotesk", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --radius: 0.625rem;
+  --background: oklch(0.9647 0.0322 76.99);
+  --foreground: oklch(0.2476 0.0473 22.22);
+  --card: oklch(0.8935 0.1041 83.88);
+  --card-foreground: oklch(0.2476 0.0473 22.22);
+  --popover: oklch(0.8935 0.1041 83.88);
+  --popover-foreground: oklch(0.2476 0.0473 22.22);
+  --primary: oklch(0.5045 0.2009 27.06);
+  --primary-foreground: oklch(0.9647 0.0322 76.99);
+  --secondary: oklch(0.7155 0.1442 27.46);
+  --secondary-foreground: oklch(0.9647 0.0322 76.99);
+  --muted: oklch(0.8935 0.1041 83.88);
+  --muted-foreground: oklch(0.5045 0.2009 27.06);
+  --accent: oklch(0.5045 0.2009 27.06);
+  --accent-foreground: oklch(0.9647 0.0322 76.99);
+  --border: oklch(0.8935 0.1041 83.88);
+  --input: oklch(0.8935 0.1041 83.88);
+  --ring: oklch(0.7155 0.1442 27.46);
+  --sidebar: oklch(0.8935 0.1041 83.88);
+  --sidebar-foreground: oklch(0.2476 0.0473 22.22);
+  --sidebar-primary: oklch(0.7155 0.1442 27.46);
+  --sidebar-primary-foreground: oklch(0.9647 0.0322 76.99);
+  --sidebar-accent: oklch(0.5045 0.2009 27.06);
+  --sidebar-accent-foreground: oklch(0.9647 0.0322 76.99);
+  --sidebar-border: oklch(0.8935 0.1041 83.88);
+  --sidebar-ring: oklch(0.7155 0.1442 27.46);
+}
+
+body {
+  margin: 0;
+}
+
+.folded-corner {
+  box-shadow: 0 1px 20px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -4px rgba(0, 0, 0, 0.2);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+.dark {
+  --background: oklch(0.2476 0.0473 22.22);
+  --foreground: oklch(0.9647 0.0322 76.99);
+  --card: oklch(0.5045 0.2009 27.06);
+  --card-foreground: oklch(0.9647 0.0322 76.99);
+  --popover: oklch(0.5045 0.2009 27.06);
+  --popover-foreground: oklch(0.9647 0.0322 76.99);
+  --primary: oklch(0.8935 0.1041 83.88);
+  --primary-foreground: oklch(0.2476 0.0473 22.22);
+  --secondary: oklch(0.7155 0.1442 27.46);
+  --secondary-foreground: oklch(0.9647 0.0322 76.99);
+  --muted: oklch(0.5045 0.2009 27.06);
+  --muted-foreground: oklch(0.9647 0.0322 76.99);
+  --accent: oklch(0.8935 0.1041 83.88);
+  --accent-foreground: oklch(0.2476 0.0473 22.22);
+  --border: oklch(0.5045 0.2009 27.06);
+  --input: oklch(0.5045 0.2009 27.06);
+  --ring: oklch(0.7155 0.1442 27.46);
+  --sidebar: oklch(0.5045 0.2009 27.06);
+  --sidebar-foreground: oklch(0.9647 0.0322 76.99);
+  --sidebar-primary: oklch(0.7155 0.1442 27.46);
+  --sidebar-primary-foreground: oklch(0.9647 0.0322 76.99);
+  --sidebar-accent: oklch(0.8935 0.1041 83.88);
+  --sidebar-accent-foreground: oklch(0.2476 0.0473 22.22);
+  --sidebar-border: oklch(0.5045 0.2009 27.06);
+  --sidebar-ring: oklch(0.7155 0.1442 27.46);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* english */
+@font-face {
+  font-family: "Grotesk";
+  src: url("/fonts/Neurial-Grotesk/NeurialGrotesk-Light.otf") format("otf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("/fonts/Neurial-Grotesk/NeurialGrotesk-Light.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("/fonts/Neurial-Grotesk/NeurialGrotesk-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("/fonts/Neurial-Grotesk/NeurialGrotesk-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("/fonts/Neurial-Grotesk/NeurialGrotesk-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("/fonts/Neurial-Grotesk/NeurialGrotesk-Extrabold.otf") format("otf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/* Signature */
+@font-face {
+  font-family: "Signature";
+  src: url("/fonts/WhisperingSignature.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* arabic */
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Thin.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlaypenSansArabic";
+  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes image1 {
+  0%,
+  39% {
+    opacity: 1;
+  }
+  40%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes staticNoise {
+  0%,
+  39%,
+  44%,
+  89%,
+  94%,
+  100% {
+    opacity: 0;
+  }
+  40%,
+  43%,
+  90%,
+  93% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes image2 {
+  0%,
+  42% {
+    opacity: 0;
+  }
+  43%,
+  90% {
+    opacity: 1;
+  }
+}
+
+.animate-image1 {
+  animation: image1 20s infinite;
+}
+
+.animate-image2 {
+  animation: image2 20s infinite;
+}
+
+.animate-staticNoise {
+  animation: staticNoise 20s infinite;
+}
