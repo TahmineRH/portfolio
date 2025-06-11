@@ -18,5 +18,9 @@
   "now": {
     "title": "Now",
     "paragraph": "Now, I work as a developer. Every day brings new problems to solve, and I’m still learning. It’s not always easy—some days are exhausting—but the feeling of progress and growth is something I really value. When I look back at how it all unfolded, I realize nothing was random. Every step, even the uncertain ones, helped shape who I’ve become."
+  },
+  "skills": {
+    "title": "Skills and Tools",
+    "description": "Some of the languages, tools, and concepts I have experience with."
   }
 }

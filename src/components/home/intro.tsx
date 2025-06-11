@@ -8,7 +8,7 @@ function Intro() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full flex max-md:flex-col-reverse justify-center gap-20 items-start 2xl:py-52 py-40 max-md:px-4">
+    <div className="w-full flex max-md:flex-col-reverse justify-between gap-20 items-start md:h-dvh 2xl:py-52 py-40">
       <div className="flex flex-col gap-10">
         <h1 className="2xl:text-7xl text-6xl max-md:text-5xl w-200 font-medium max-md:leading-8 leading-20 max-md:w-full">
           {t("name")}
