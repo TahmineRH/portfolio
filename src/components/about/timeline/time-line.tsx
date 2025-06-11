@@ -12,24 +12,30 @@ const sectionVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 1, ease: "easeOut" },
   },
 };
 
-function Section({ title, text, image, reverse, maskDirection }: any) {
+interface SectionProps {
+  title: string;
+  text: string;
+  image: string;
+  reverse: boolean;
+  maskDirection: string;
+}
+
+function Section({ title, text, image, reverse, maskDirection }: SectionProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
   return (
-    <motion.div
-      ref={ref}
-      variants={sectionVariants}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      className="w-full h-fit justify-center flex flex-col items-center"
-    >
+    <div className="w-full h-fit justify-center flex flex-col items-center">
       <Title>{title}</Title>
-      <div
+      <motion.div
+        ref={ref}
+        variants={sectionVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
         className={`w-full flex justify-between items-center ${
           reverse ? "flex-row-reverse rtl:flex-row" : "rtl:flex-row-reverse"
         }`}
@@ -44,8 +50,8 @@ function Section({ title, text, image, reverse, maskDirection }: any) {
           }}
         />
         <p className="w-96 min-h-100 text-center flex items-center">{text}</p>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 
