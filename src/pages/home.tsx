@@ -4,7 +4,7 @@ import ProjectItem from "../components/projects/item";
 
 function Home() {
   return (
-    <main className="w-full max-md:px-4 flex flex-col px-52">
+    <main className="w-full max-md:px-4 flex flex-col 2xl:px-52 px-20">
       <Intro />
       <Skilles />
       <div className="p-32 flex gap-20 h-100">
