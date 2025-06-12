@@ -16,7 +16,7 @@ export default function ZoomToCenterCard() {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
-    <div className="relative place-items-center p-40 h-screen w-full">
+    <div className="relative place-items-center px-40 py-10 h-screen w-full">
       <div className="grid grid-cols-5 gap-2 h-full w-full">
         {cards.map((card) => (
           <motion.div
@@ -49,18 +49,16 @@ export default function ZoomToCenterCard() {
               exit={{ opacity: 0 }}
               onClick={() => setActiveCard(null)}
             />
-
             <motion.div
               layoutId={`card-${activeCard.id}`}
               className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-3xl h-[80vh] rounded-xl shadow-xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
-              {/* تصویر که بالا می‌ره */}
               <motion.div
                 className="w-full h-full"
-                initial={{ y: 0 }}
-                animate={{ y: -200 }}
-                exit={{ y: 0 }}
+                  initial={{ y: 0, scale: 0.99 }}
+                animate={{ y: -200, scale: 1.1 }}
+                exit={{ y: 0, scale: 1 }}
                 transition={{
                   type: "tween",
                   delay: 0.05,
@@ -75,7 +73,6 @@ export default function ZoomToCenterCard() {
                 />
               </motion.div>
 
-              {/* محتوا که از پایین بیاد بالا */}
               <motion.div
                 className="w-full h-96 text-center "
                 initial={{ y: 100, opacity: 0 }}
