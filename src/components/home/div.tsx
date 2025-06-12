@@ -12,11 +12,11 @@ const cards = [
 
 type Card = { id: number; title: string; content: string };
 
-export default function ZoomToCenterCard() {
+export default function ZoomDialogCards() {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
-    <div className="relative place-items-center px-40 py-10 h-screen w-full">
+    <div className="relative place-items-center px-40 py-10 h-full w-full">
       <div className="grid grid-cols-5 gap-2 h-full w-full">
         {cards.map((card) => (
           <motion.div
@@ -24,7 +24,7 @@ export default function ZoomToCenterCard() {
             layoutId={`card-${card.id}`}
             className={cn(
               `col-span-${card.col}`,
-              "rounded-lg shadow-lg flex items-center justify-center text-center hover:cursor-pointer overflow-hidden"
+              "rounded-lg shadow-lg flex items-center justify-center text-center overflow-hidden"
             )}
             onClick={() => setActiveCard(card)}
           >
@@ -42,7 +42,6 @@ export default function ZoomToCenterCard() {
       <AnimatePresence>
         {activeCard && (
           <>
-            {/* بک‌گراند تار */}
             <motion.div
               className="fixed inset-0 bg-black/70 z-30"
               initial={{ opacity: 0 }}
@@ -51,10 +50,9 @@ export default function ZoomToCenterCard() {
               onClick={() => setActiveCard(null)}
             />
 
-            {/* کارت وسط صفحه */}
             <motion.div
               layoutId={`card-${activeCard.id}`}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-2xl h-[80vh] rounded-lg shadow-2xl overflow-hidden"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-2xl h-[80vh] rounded-xl shadow-2xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
               <div className="relative w-full h-full">
@@ -68,11 +66,12 @@ export default function ZoomToCenterCard() {
               </div>
               <motion.div
                 className="fixed bottom-0 left-0 w-full h-52 bg-background/50 z-20 text-background"
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                exit={{ y: 100 }}
+                initial={{ y: 400 }}
+                animate={{ y: 20 }}
+                exit={{ y: 300 }}
                 transition={{
-                  type: "tween",
+                  type: "spring",
+                  damping: 15,
                 }}
               >
                 <div className="absolute inset-0 flex flex-col items-center justify-center backdrop-blur-sm">
@@ -83,8 +82,6 @@ export default function ZoomToCenterCard() {
                 </div>
               </motion.div>
             </motion.div>
-
-            {/* نوار مشکی پایین صفحه */}
           </>
         )}
       </AnimatePresence>

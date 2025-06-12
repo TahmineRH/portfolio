@@ -11,7 +11,7 @@ function Skilles() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-4 justify-center">
         <h1 className="2xl:text-5xl text-4xl max-md:text-3xl font-medium">
           {t("skills.title")}
@@ -24,7 +24,7 @@ function Skilles() {
           <ul className="text-sm flex flex-col gap-4">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
+                <TooltipTrigger className="group-hover:text-secondary duration-300">
                   JavaScript
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -39,7 +39,7 @@ function Skilles() {
               </Tooltip>{" "}
               &{" "}
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
+                <TooltipTrigger className="group-hover:text-secondary duration-300">
                   TypeScript
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -60,7 +60,7 @@ function Skilles() {
           <ul className="text-sm flex flex-col gap-4">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
+                <TooltipTrigger className="group-hover:text-secondary duration-300">
                   React
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -85,7 +85,7 @@ function Skilles() {
             <li>Accessible HTML & CSS</li>
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
+                <TooltipTrigger className="group-hover:text-secondary duration-300">
                   Tailwind
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -102,7 +102,7 @@ function Skilles() {
             <li>CSS-in-JS</li>
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
+                <TooltipTrigger className="group-hover:text-secondary duration-300">
                   UI Frameworks
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -123,7 +123,7 @@ function Skilles() {
           <ul className="text-sm flex flex-col gap-4">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
+                <TooltipTrigger className="group-hover:text-secondary duration-300">
                   Three.js
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">

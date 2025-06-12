@@ -22,5 +22,9 @@
   "skills": {
     "title": "Skills and Tools",
     "description": "Some of the languages, tools, and concepts I have experience with."
+  },
+  "snapshot": {
+    "title": "Projects Snapshot",
+    "description": "Some of the side projects I've been working on in the last few months."
   }
 }
