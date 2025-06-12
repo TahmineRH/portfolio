@@ -14,7 +14,7 @@ export const SocialMedia = () => {
         src={theme === "light" ? GitHub : GitHubRed}
         draggable={false}
         onContextMenu={(e) => e.preventDefault()}
-        className=" w-6 h-6 object-cover"
+        className=" w-6 h-6 object-contain"
         alt="GitHub"
       />
       <img
