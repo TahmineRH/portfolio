@@ -27,7 +27,7 @@ function Skilles() {
                 <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
                   JavaScript
                 </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-xl overflow-hidden">
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
                   <img
                     src={drake1}
                     draggable={false}
@@ -42,7 +42,7 @@ function Skilles() {
                 <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
                   TypeScript
                 </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-xl overflow-hidden">
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
                   <img
                     src={drake2}
                     draggable={false}
@@ -63,7 +63,7 @@ function Skilles() {
                 <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
                   React
                 </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-xl overflow-hidden">
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
                   <img
                     src={meme1}
                     draggable={false}
@@ -88,7 +88,7 @@ function Skilles() {
                 <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
                   Tailwind
                 </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-xl overflow-hidden">
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
                   <img
                     src={disaster}
                     draggable={false}
@@ -105,7 +105,7 @@ function Skilles() {
                 <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
                   UI Frameworks
                 </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-xl overflow-hidden">
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
                   <img
                     src={dicaprio}
                     draggable={false}
@@ -126,7 +126,7 @@ function Skilles() {
                 <TooltipTrigger className="cursor-pointer group-hover:text-secondary duration-300">
                   Three.js
                 </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-xl overflow-hidden">
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
                   <img
                     src={dog}
                     draggable={false}
