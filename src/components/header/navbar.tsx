@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed m-4 left-1/2 top-0 -translate-x-1/2 w-96 z-50 transition-transform duration-1000 rounded-lg bg-foreground/5 backdrop-blur-md",
+        "fixed m-4 left-1/2 top-0 -translate-x-1/2 w-96 z-30 transition-transform duration-1000 rounded-lg bg-foreground/5 backdrop-blur-md",
         show ? "translate-y-0" : "-translate-y-32"
       )}
     >

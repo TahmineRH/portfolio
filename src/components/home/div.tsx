@@ -32,7 +32,7 @@ export default function ZoomToCenterCard() {
               src={me1}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
-              className=" w-full h-full object-cover"
+              className="w-full h-full object-cover "
               alt={`project-${card.id}`}
             />
           </motion.div>
@@ -42,51 +42,49 @@ export default function ZoomToCenterCard() {
       <AnimatePresence>
         {activeCard && (
           <>
+            {/* بک‌گراند تار */}
             <motion.div
-              className="fixed inset-0 bg-black/80 z-40"
+              className="fixed inset-0 bg-black/70 z-30"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setActiveCard(null)}
             />
+
+            {/* کارت وسط صفحه */}
             <motion.div
               layoutId={`card-${activeCard.id}`}
-              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-3xl h-[80vh] rounded-xl shadow-xl overflow-hidden"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-2xl h-[80vh] rounded-lg shadow-2xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
-              <motion.div
-                className="w-full h-full"
-                  initial={{ y: 0, scale: 0.99 }}
-                animate={{ y: -200, scale: 1.1 }}
-                exit={{ y: 0, scale: 1 }}
-                transition={{
-                  type: "tween",
-                  delay: 0.05,
-                }}
-              >
+              <div className="relative w-full h-full">
                 <img
                   src={me1}
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
-                  className=" w-full h-full object-cover"
-                  alt={`project`}
+                  className="w-full h-full object-cover"
+                  alt="preview"
                 />
-              </motion.div>
-
+              </div>
               <motion.div
-                className="w-full h-96 text-center "
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: -100, opacity: 1 }}
-                exit={{ y: 100, opacity: 0 }}
+                className="fixed bottom-0 left-0 w-full h-52 bg-background/50 z-20 text-background"
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                exit={{ y: 100 }}
                 transition={{
                   type: "tween",
-                  delay: 0.05,
                 }}
               >
-                <h2 className="text-xl font-bold mb-1">{activeCard.title}</h2>
-                <p className="text-sm text-background">{activeCard.content}</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center backdrop-blur-sm">
+                  <h2 className="text-3xl font-bold mb-2">
+                    {activeCard.title}
+                  </h2>
+                  <p className="text-lg">{activeCard.content}</p>
+                </div>
               </motion.div>
             </motion.div>
+
+            {/* نوار مشکی پایین صفحه */}
           </>
         )}
       </AnimatePresence>
