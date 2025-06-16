@@ -1,38 +1,64 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import me1 from "@/assets/a.jpg";
+import travel from "@/assets/travel.png";
+import hesamsanat from "@/assets/p1.png";
+import treeD from "@/assets/3d.png";
+import ai from "@/assets/AI.png";
 import { cn } from "../../lib/utils";
 
 const cards = [
-  { id: 1, title: "Card One", content: "This is card one", col: 3 },
-  { id: 2, title: "Card Two", content: "This is card two", col: 2 },
-  { id: 4, title: "Card Four", content: "This is card four", col: 4 },
-  { id: 3, title: "Card Three", content: "This is card three", col: 1 },
+  {
+    id: 1,
+    title: "Card One",
+    content: "This is card one",
+    col: 4,
+    picture: treeD,
+  },
+  {
+    id: 2,
+    title: "Card Two",
+    content: "This is card two",
+    col: 3,
+    picture: hesamsanat,
+  },
+  {
+    id: 4,
+    title: "Card Four",
+    content: "This is card four",
+    col: 3,
+    picture: travel,
+  },
+  {
+    id: 3,
+    title: "Card Three",
+    content: "This is card three",
+    col: 4,
+    picture: ai,
+  },
 ];
 
-type Card = { id: number; title: string; content: string };
+type Card = { id: number; title: string; content: string; picture: string };
 
 export default function ZoomDialogCards() {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
-    <div className="relative place-items-center px-40 py-10 h-full w-full">
-      <div className="grid grid-cols-5 gap-2 h-full w-full">
+    <div className="relative place-items-center 2xl:px-52 lg:px-40 2xl:py-4 h-full w-full">
+      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full">
         {cards.map((card) => (
           <motion.div
             key={card.id}
             layoutId={`card-${card.id}`}
             className={cn(
-              `col-span-${card.col}`,
-              "rounded-lg shadow-lg flex items-center justify-center text-center overflow-hidden"
+              `rounded-lg bg-card max-lg:col-span-7 col-span-${card.col} flex items-center justify-center text-center overflow-hidden`
             )}
             onClick={() => setActiveCard(card)}
           >
             <img
-              src={me1}
+              src={card.picture}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full object-cover "
+              className="w-full h-full max-lg:h-80 object-contain "
               alt={`project-${card.id}`}
             />
           </motion.div>
@@ -52,20 +78,20 @@ export default function ZoomDialogCards() {
 
             <motion.div
               layoutId={`card-${activeCard.id}`}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-2xl h-[80vh] rounded-xl shadow-2xl overflow-hidden"
+              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl h-[80vh] rounded-xl shadow-2xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full px-12">
                 <img
-                  src={me1}
+                  src={activeCard.picture}
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain object-top"
                   alt="preview"
                 />
               </div>
               <motion.div
-                className="fixed bottom-0 left-0 w-full h-52 bg-background/50 z-20 text-background"
+                className="fixed bottom-0 left-0 w-full h-52 bg-background/50 z-20"
                 initial={{ y: 400 }}
                 animate={{ y: 20 }}
                 exit={{ y: 300 }}

@@ -17,9 +17,9 @@ html.lang-fa {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --radius: 0.625rem;
-  --background: oklch(0.9647 0.0322 76.99);
+  --background: oklab(96.366% 0.00646 0.03073);
   --foreground: oklch(0.2476 0.0473 22.22);
-  --card: oklch(0.8935 0.1041 83.88);
+  --card: oklch(0.92 0.045 80);
   --card-foreground: oklch(0.2476 0.0473 22.22);
   --popover: oklch(0.8935 0.1041 83.88);
   --popover-foreground: oklch(0.2476 0.0473 22.22);
@@ -94,7 +94,7 @@ body {
 .dark {
   --background: oklch(0.2476 0.0473 22.22);
   --foreground: oklch(0.9647 0.0322 76.99);
-  --card: oklch(0.5045 0.2009 27.06);
+  --card: oklch(0.29 0.045 22.22);
   --card-foreground: oklch(0.9647 0.0322 76.99);
   --popover: oklch(0.5045 0.2009 27.06);
   --popover-foreground: oklch(0.9647 0.0322 76.99);
