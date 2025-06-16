@@ -91,7 +91,7 @@ export default function ZoomDialogCards() {
                 />
               </div>
               <motion.div
-                className="fixed bottom-0 left-0 w-full h-52 bg-background/50 z-20"
+                className="fixed bottom-0 left-0 w-full h-52 bg-black/40 z-20"
                 initial={{ y: 400 }}
                 animate={{ y: 20 }}
                 exit={{ y: 300 }}
