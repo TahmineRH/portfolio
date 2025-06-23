@@ -8,12 +8,12 @@ function Intro() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full flex max-md:flex-col-reverse justify-between gap-20 items-start md:h-dvh 2xl:py-52 py-40">
-      <div className="flex flex-col gap-10">
-        <h1 className="2xl:text-7xl text-6xl max-md:text-5xl w-200 font-medium max-md:leading-8 leading-20 max-md:w-full">
+    <div className="w-full flex max-md:flex-col max-md:items-center max-md:justify-center justify-between gap-20 max-md:gap-10 items-start md:h-dvh 2xl:py-52 pt-32">
+      <div className="flex flex-col gap-10 max-md:gap-8">
+        <h1 className="2xl:text-7xl text-6xl max-md:text-5xl w-200 max-md:w-auto font-medium max-md:leading-8 leading-20">
           {t("name")}
         </h1>
-        <h1 className="text-lg leading-8 w-200 font-light max-md:w-full">
+        <h1 className="text-lg max-md:text-base leading-8 max-md:leading-6 max-md:text-justify w-200 md:font-light max-md:text-foreground/80 max-md:w-full">
           {t("intro")}
         </h1>
         <div className="flex gap-4">
@@ -31,7 +31,7 @@ function Intro() {
         </div>
         <SocialMedia />
       </div>
-      <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80 ">
+      <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80  max-md:h-108 max-md:w-fit">
         <Drag />
       </div>
     </div>

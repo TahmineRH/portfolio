@@ -44,7 +44,7 @@ export default function ZoomDialogCards() {
 
   return (
     <div className="relative place-items-center 2xl:px-52 lg:px-40 2xl:py-4 h-full w-full">
-      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full">
+      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full ">
         {cards.map((card) => (
           <motion.div
             key={card.id}
@@ -58,7 +58,7 @@ export default function ZoomDialogCards() {
               src={card.picture}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full max-lg:h-80 object-contain "
+              className="w-full h-full max-lg:h-80 max-md:h-64 object-contain "
               alt={`project-${card.id}`}
             />
           </motion.div>

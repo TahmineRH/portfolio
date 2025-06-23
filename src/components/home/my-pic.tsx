@@ -4,9 +4,9 @@ import staticImg from "@/assets/static.gif";
 
 export const MyPic = () => {
   return (
-    <div className="rounded-full 2xl:w-[24.15rem] 2xl:h-[24.25rem] h-81 w-80 border-dashed border-2 border-primary flex justify-center items-center">
+    <div className="rounded-full max-md:rounded-lg 2xl:w-[24.15rem] 2xl:h-[24.25rem] h-81 w-80 max-md:h-108 max-md:w-96 border-dashed border-2 border-primary max-md:border-0 flex justify-center items-center">
       <div
-        className="relative 2xl:w-96 2xl:h-96 h-80 w-80  rounded-full overflow-hidden"
+        className="relative 2xl:w-96 2xl:h-96 h-80 w-80 max-md:h-107 max-md:w-full rounded-full max-md:rounded-lg overflow-hidden"
         style={{
           backgroundImage: `url(${me1})`,
           backgroundSize: "cover",

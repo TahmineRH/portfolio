@@ -12,55 +12,19 @@ function Skilles() {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col gap-4 justify-center">
+      <div className="flex flex-col gap-4 justify-center max-md:gap-1">
         <h1 className="2xl:text-5xl text-4xl max-md:text-3xl font-medium">
           {t("skills.title")}
         </h1>
-        <h1 className="text-lg font-light">{t("skills.description")}</h1>
+        <h1 className="text-lg font-light max-md:text-base max-md:text-foreground/90">{t("skills.description")}</h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 group">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 group">
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl">Languages</h3>
-          <ul className="text-sm flex flex-col gap-4">
+          <h3 className="font-medium text-xl max-md:text-lg">Frameworks & Libraries</h3>
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
-                  JavaScript
-                </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-lg overflow-hidden">
-                  <img
-                    src={drake1}
-                    draggable={false}
-                    onContextMenu={(e) => e.preventDefault()}
-                    className="w-52 h-52 object-cover"
-                    alt="image1"
-                  />
-                </TooltipContent>
-              </Tooltip>{" "}
-              &{" "}
-              <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
-                  TypeScript
-                </TooltipTrigger>
-                <TooltipContent className="p-0 rounded-lg overflow-hidden">
-                  <img
-                    src={drake2}
-                    draggable={false}
-                    onContextMenu={(e) => e.preventDefault()}
-                    className="w-52 h-52 object-cover"
-                    alt="image1"
-                  />
-                </TooltipContent>
-              </Tooltip>
-            </li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl">Frameworks & Libraries</h3>
-          <ul className="text-sm flex flex-col gap-4">
-            <li>
-              <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
                   React
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -80,12 +44,12 @@ function Skilles() {
           </ul>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl">UI & Styling</h3>
-          <ul className="text-sm flex flex-col gap-4">
+          <h3 className="font-medium text-xl max-md:text-lg">UI & Styling</h3>
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>Accessible HTML & CSS</li>
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
                   Tailwind
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -102,7 +66,7 @@ function Skilles() {
             <li>CSS-in-JS</li>
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
                   UI Frameworks
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -119,11 +83,47 @@ function Skilles() {
           </ul>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl">Other</h3>
-          <ul className="text-sm flex flex-col gap-4">
+          <h3 className="font-medium text-xl max-md:text-lg">Languages</h3>
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                  JavaScript
+                </TooltipTrigger>
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
+                  <img
+                    src={drake1}
+                    draggable={false}
+                    onContextMenu={(e) => e.preventDefault()}
+                    className="w-52 h-52 object-cover"
+                    alt="image1"
+                  />
+                </TooltipContent>
+              </Tooltip>{" "}
+              &{" "}
+              <Tooltip delayDuration={300}>
+                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                  TypeScript
+                </TooltipTrigger>
+                <TooltipContent className="p-0 rounded-lg overflow-hidden">
+                  <img
+                    src={drake2}
+                    draggable={false}
+                    onContextMenu={(e) => e.preventDefault()}
+                    className="w-52 h-52 object-cover"
+                    alt="image1"
+                  />
+                </TooltipContent>
+              </Tooltip>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="font-medium text-xl max-md:text-lg">Other</h3>
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
+            <li>
+              <Tooltip delayDuration={300}>
+                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
                   Three.js
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">

@@ -3,7 +3,7 @@ import { MyPic } from "./home/my-pic";
 
 export default function Drag() {
   return (
-    <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80">
+    <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80 max-md:h-108 max-md:w-96">
       <motion.div
         drag
         dragDirectionLock
@@ -12,7 +12,7 @@ export default function Drag() {
         dragElastic={0.1}
         whileDrag={{ cursor: "grabbing" }}
         style={{
-          width: 320,
+          width: 300,
           height: 320,
           position: "absolute",
         }}

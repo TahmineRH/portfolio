@@ -4,7 +4,7 @@ import SnapshotProject from "../components/home/snapshot";
 
 function Home() {
   return (
-    <main className="w-full max-md:px-4 flex flex-col gap-10 2xl:px-52 px-24 pb-5">
+    <main className="space-y-14 lg:space-y-24 2xl:px-52 md:px-24 px-4 mx-auto">
       <Intro />
       <Skilles />
       <SnapshotProject />
