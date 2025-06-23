@@ -24,7 +24,7 @@ function Skilles() {
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
                   React
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -49,7 +49,7 @@ function Skilles() {
             <li>Accessible HTML & CSS</li>
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300  hover:cursor-pointer transition-colors">
                   Tailwind
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -66,7 +66,7 @@ function Skilles() {
             <li>CSS-in-JS</li>
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
                   UI Frameworks
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -87,7 +87,7 @@ function Skilles() {
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
                   JavaScript
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -102,7 +102,7 @@ function Skilles() {
               </Tooltip>{" "}
               &{" "}
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
                   TypeScript
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">
@@ -123,7 +123,7 @@ function Skilles() {
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
-                <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary duration-300 hover:text-primary hover:cursor-pointer">
+                <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
                   Three.js
                 </TooltipTrigger>
                 <TooltipContent className="p-0 rounded-lg overflow-hidden">

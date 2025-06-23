@@ -78,7 +78,7 @@ export default function ZoomDialogCards() {
 
             <motion.div
               layoutId={`card-${activeCard.id}`}
-              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl h-[80vh] rounded-xl shadow-2xl overflow-hidden"
+              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl max-md:w-sm max-md:h-96 h-[80vh] rounded-xl shadow-2xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
               <div className="relative w-full h-full px-12">
