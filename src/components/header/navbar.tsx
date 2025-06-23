@@ -2,6 +2,8 @@ import { FolderOpen, Home, Info, Mail, Settings } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../../lib/utils";
+import LangToggle from "../locale/local";
+import ToggleTheme from "../theme/theme";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,6 +11,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
 export default function Navbar() {
   const location = useLocation();
@@ -108,21 +111,41 @@ export default function Navbar() {
                       </div>
                     </Link>
                   ))}
-                  <div
-                    className={cn(
-                      "flex bg-foreground/10 backdrop-blur-2xl items-center gap-3  px-2 py-3 rounded-lg hover:bg-accent/20 transition-colors duration-300"
-                    )}
-                  >
-                    <div className="bg-background/20 rounded-2xl p-3">
-                      <Settings className="w-5 h-5" />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="font-medium">Settings</span>
-                      <span className="text-foreground/80 text-xs">
-                        Settings
-                      </span>
-                    </div>
-                  </div>
+                  <Popover>
+                    <PopoverTrigger
+                      className={cn(
+                        "flex bg-foreground/10 backdrop-blur-2xl items-center gap-3  px-2 py-3 rounded-lg hover:bg-accent/20 transition-colors duration-300"
+                      )}
+                    >
+                      <>
+                        <div className="bg-background/20 rounded-2xl p-3">
+                          <Settings className="w-5 h-5" />
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="font-medium">Settings</span>
+                          <span className="text-foreground/80 text-xs">
+                            Settings
+                          </span>
+                        </div>
+                      </>
+                    </PopoverTrigger>
+                    <PopoverContent
+                      side="left bottom"
+                      className="w-64 space-y-4 bg-background mt-12"
+                    >
+                      {/* Theme toggle */}
+                      <div className="flex items-center justify-between px-2">
+                        <span className="text-sm">Theme</span>
+                        <ToggleTheme />
+                      </div>
+
+                      {/* Language switcher */}
+                      <div className="flex items-center justify-between px-2">
+                        <span className="text-sm">Language</span>
+                        <LangToggle />
+                      </div>
+                    </PopoverContent>
+                  </Popover>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
