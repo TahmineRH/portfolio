@@ -50,7 +50,7 @@ export default function Navbar() {
     {
       name: t("navbar.about"),
       path: "/about",
-      description: t("navbar.descriptions.home"),
+      description: t("navbar.descriptions.about"),
       icon: <Info className="w-5 h-5" />,
     },
     {
