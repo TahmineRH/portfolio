@@ -1,14 +1,14 @@
+import cat from "@/assets/cat.png";
 import CVRed from "@/assets/icons/cv-red.svg";
 import CV from "@/assets/icons/cv.svg";
 import GitHubRed from "@/assets/icons/github-red.svg";
 import GitHub from "@/assets/icons/github.svg";
 import InstagramRed from "@/assets/icons/instagram-red.svg";
 import Instagram from "@/assets/icons/instagram.svg";
-import cat from "@/assets/cat.png";
 import { motion } from "framer-motion";
-import { useThemeStore } from "../store/theme";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { useThemeStore } from "../store/theme";
 
 export default function Footer() {
   const { t } = useTranslation();
