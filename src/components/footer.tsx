@@ -76,7 +76,7 @@ export default function Footer() {
           <a
             href="https://github.com/yourname"
             target="_blank"
-            className="hover:text-[#84594d] transition"
+            className="hover:text-[#84594d] transition hover:scale-110 overflow-visible duration-300"
           >
             <img
               src={theme === "light" ? GitHub : GitHubdark}
@@ -89,7 +89,7 @@ export default function Footer() {
           <a
             href="https://instagram.com/yourname"
             target="_blank"
-            className="hover:text-[#84594d] transition"
+            className="hover:text-[#84594d] transition hover:scale-110 overflow-visible duration-300"
           >
             <img
               src={theme === "light" ? CV : CVdark}
@@ -101,13 +101,13 @@ export default function Footer() {
           </a>
           <a
             href="mailto:you@example.com"
-            className="hover:text-[#84594d] transition"
+            className="hover:text-[#84594d] transition hover:scale-110 overflow-visible duration-300"
           >
             <img
               src={theme === "light" ? Instagram : Instagramdark}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
-              className=" w-6 h-6 object-cover"
+              className=" w-6 h-6 object-cover "
               alt="Instagram"
             />
           </a>
