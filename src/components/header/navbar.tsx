@@ -1,5 +1,15 @@
-import { FolderOpen, Home, Info, Mail, Settings } from "lucide-react";
+import {
+  DotIcon,
+  EllipsisVertical,
+  FolderOpen,
+  Home,
+  Info,
+  Mail,
+  MenuIcon,
+  Settings,
+} from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../../lib/utils";
 import LangToggle from "../locale/local";
@@ -14,7 +24,10 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
+
   const location = useLocation();
+
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -31,27 +44,27 @@ export default function Navbar() {
 
   const navLinks = [
     {
-      name: "Home",
+      name: t("navbar.home"),
       path: "/",
-      description: "Welcome to my forever work-in-progress!",
+      description: t("navbar.descriptions.home"),
       icon: <Home className="w-5 h-5" />,
     },
     {
-      name: "About",
+      name: t("navbar.about"),
       path: "/about",
-      description: "Learn more about me!",
+      description: t("navbar.descriptions.home"),
       icon: <Info className="w-5 h-5" />,
     },
     {
-      name: "Projects",
+      name: t("navbar.projects"),
       path: "/projects",
-      description: "See what I’ve built",
+      description: t("navbar.descriptions.projects"),
       icon: <FolderOpen className="w-5 h-5" />,
     },
     {
-      name: "Contact",
+      name: t("navbar.contact"),
       path: "/contact",
-      description: "Get in touch with me",
+      description: t("navbar.descriptions.contact"),
       icon: <Mail className="w-5 h-5" />,
     },
   ];
@@ -83,11 +96,11 @@ export default function Navbar() {
 
       {/* Mobile */}
       <div className="md:hidden fixed top-4 right-4 z-30">
-        <NavigationMenu>
+        <NavigationMenu dir={i18n.language === "fa" ? "rtl" : "ltr"}>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="rounded-lg bg-foreground/5 backdrop-blur-3xl px-4 py-2">
-                Menu
+                {t("navbar.menu")}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-4 w-85">
                 <div className="flex flex-col gap-3">
@@ -114,34 +127,36 @@ export default function Navbar() {
                   <Popover>
                     <PopoverTrigger
                       className={cn(
-                        "flex bg-foreground/10 backdrop-blur-2xl items-center gap-3  px-2 py-3 rounded-lg hover:bg-accent/20 transition-colors duration-300"
+                        " bg-foreground/10 backdrop-blur-2xl items-center  px-2 py-3 rounded-lg hover:bg-accent/20 transition-colors duration-300"
                       )}
                     >
-                      <>
-                        <div className="bg-background/20 rounded-2xl p-3">
-                          <Settings className="w-5 h-5" />
+                      <div className="flex items-center justify-between gap-3 w-full">
+                        <div className="flex gap-3">
+                          <div className="bg-background/20 rounded-2xl p-3">
+                            <Settings className="w-5 h-5" />
+                          </div>
+                          <div className="flex flex-col items-start">
+                            <span className="font-medium">
+                              {t("navbar.settings")}
+                            </span>
+                            <span className="text-foreground/80 text-xs">
+                              {t("navbar.descriptions.settings")}
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex flex-col">
-                          <span className="font-medium">Settings</span>
-                          <span className="text-foreground/80 text-xs">
-                            Settings
-                          </span>
-                        </div>
-                      </>
+                        {/* <EllipsisVertical className="h-5 text-foreground/70" /> */}
+                      </div>
                     </PopoverTrigger>
-                    <PopoverContent
-                      side="left bottom"
-                      className="w-64 space-y-4 bg-background mt-12"
-                    >
+                    <PopoverContent className="w-40 space-y-2 bg-background/70 py-2 px-0">
                       {/* Theme toggle */}
-                      <div className="flex items-center justify-between px-2">
-                        <span className="text-sm">Theme</span>
+                      <div className="flex items-center justify-between h-10 px-2">
+                        <span className="text-sm">{t("navbar.theme")}</span>
                         <ToggleTheme />
                       </div>
-
+                      <div className="border-t border-foreground/30"></div>
                       {/* Language switcher */}
-                      <div className="flex items-center justify-between px-2">
-                        <span className="text-sm">Language</span>
+                      <div className="flex items-center justify-between h-10 px-2">
+                        <span className="text-sm">{t("navbar.language")}</span>
                         <LangToggle />
                       </div>
                     </PopoverContent>

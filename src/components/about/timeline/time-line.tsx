@@ -29,27 +29,27 @@ function Section({ title, text, image, reverse, maskDirection }: SectionProps) {
   const inView = useInView(ref, { once: true });
 
   return (
-    <div className="w-full h-fit justify-center flex flex-col items-center">
+    <div className="w-full h-fit justify-center flex flex-col items-center max-md:mt-12">
       <Title>{title}</Title>
       <motion.div
         ref={ref}
         variants={sectionVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className={`w-full flex justify-between items-center ${
+        className={`w-full flex justify-between items-center max-md:flex-col max-md:mt-8 max-md:gap-8 ${
           reverse ? "flex-row-reverse rtl:flex-row" : "rtl:flex-row-reverse"
         }`}
       >
         <motion.img
           src={image}
           alt="section"
-          className="w-96 max-h-100 object-contain"
+          className="w-96 max-md:w-full max-h-100 object-contain"
           style={{
             maskImage: maskDirection,
             WebkitMaskImage: maskDirection,
           }}
         />
-        <p className="w-96 min-h-100 text-center flex items-center">{text}</p>
+        <p className="w-96 min-h-100 max-md:min-h-fit text-center flex items-center">{text}</p>
       </motion.div>
     </div>
   );

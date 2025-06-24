@@ -1,4 +1,21 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Menu",
+    "settings": "Settings",
+    "theme": "Theme",
+    "language": "Language",
+    "descriptions": {
+      "home": "Always building, always learning, Welcome!",
+      "about": "Learn more about me!",
+      "projects": "See what I’ve built",
+      "contact": "Get in touch with me",
+      "settings": "Change theme and language"
+    }
+  },
   "name": "Hey, I'm Tahmine",
   "intro": "a front-end developer focused on building scalable and maintainable web interfaces. I mostly work with React and Next.js, and I care deeply about clean architecture, performance, and a good developer experience. My goal is to bridge design and engineering by crafting UI that’s both intuitive and technically sound.",
   "projects": "Projects",

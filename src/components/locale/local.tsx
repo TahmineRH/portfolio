@@ -7,7 +7,7 @@ export default function LangToggle() {
     const newLang = i18n.language === "fa" ? "en" : "fa";
     i18n.changeLanguage(newLang);
     localStorage.setItem("lang", newLang);
-    document.documentElement.dir = newLang === "fa" ? "rtl" : "ltr";
+    document.documentElement.dir = newLang === "fa" ? "rtl" : "";
     document.documentElement.classList.remove("lang-fa", "lang-en");
     document.documentElement.classList.add(`lang-${newLang}`);
   };
