@@ -1,9 +1,9 @@
 import cat from "@/assets/cat.png";
-import CVRed from "@/assets/icons/cv-red.svg";
+import CVdark from "@/assets/icons/cv-dark.svg";
 import CV from "@/assets/icons/cv.svg";
-import GitHubRed from "@/assets/icons/github-red.svg";
+import GitHubdark from "@/assets/icons/github-dark.svg";
 import GitHub from "@/assets/icons/github.svg";
-import InstagramRed from "@/assets/icons/instagram-red.svg";
+import Instagramdark from "@/assets/icons/instagram-dark.svg";
 import Instagram from "@/assets/icons/instagram.svg";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -79,7 +79,7 @@ export default function Footer() {
             className="hover:text-[#84594d] transition"
           >
             <img
-              src={theme === "light" ? GitHub : GitHubRed}
+              src={theme === "light" ? GitHub : GitHubdark}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
               className=" w-6 h-6 object-contain"
@@ -92,7 +92,7 @@ export default function Footer() {
             className="hover:text-[#84594d] transition"
           >
             <img
-              src={theme === "light" ? CV : CVRed}
+              src={theme === "light" ? CV : CVdark}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
               className=" w-6 h-6 object-cover"
@@ -104,7 +104,7 @@ export default function Footer() {
             className="hover:text-[#84594d] transition"
           >
             <img
-              src={theme === "light" ? Instagram : InstagramRed}
+              src={theme === "light" ? Instagram : Instagramdark}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
               className=" w-6 h-6 object-cover"
