@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="flex items-center gap-8">
         <LangToggle />
-        <ToggleTheme />
+        <ToggleTheme variant="icon" />
       </div>
     </div>
   );

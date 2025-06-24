@@ -3,7 +3,11 @@ import sun from "@/assets/sun.svg";
 import { useEffect } from "react";
 import { useThemeStore } from "../../store/theme";
 
-export default function ToggleTheme() {
+type ToggleThemeProps = {
+  variant?: "icon" | "switch";
+};
+
+export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
   const { theme, setTheme, toggleTheme } = useThemeStore();
 
   useEffect(() => {
@@ -19,6 +23,29 @@ export default function ToggleTheme() {
     }
   }, [setTheme]);
 
+  if (variant === "switch") {
+    return (
+      <div
+        dir="ltr"
+        onClick={toggleTheme}
+        className={`w-12 h-7 flex items-center px-1 rounded-full cursor-pointer transition-colors duration-300 bg-foreground/50`}
+      >
+        <div
+          className={`w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-300 ${
+            theme === "dark" ? "translate-x-5" : "translate-x-0"
+          } flex items-center justify-center`}
+        >
+          <img
+            src={theme === "dark" ? sun : moon}
+            alt="Theme icon"
+            className="w-4 h-4"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // حالت آیکنی ساده
   return (
     <button
       onClick={toggleTheme}
@@ -28,8 +55,8 @@ export default function ToggleTheme() {
       <div className="w-6 h-6">
         <img
           src={theme === "dark" ? sun : moon}
-          className="object-cover w-full "
           alt={theme === "dark" ? "Sun icon" : "Moon icon"}
+          className="object-cover w-full"
         />
       </div>
     </button>

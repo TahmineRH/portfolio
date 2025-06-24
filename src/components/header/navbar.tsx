@@ -1,13 +1,4 @@
-import {
-  DotIcon,
-  EllipsisVertical,
-  FolderOpen,
-  Home,
-  Info,
-  Mail,
-  MenuIcon,
-  Settings,
-} from "lucide-react";
+import { FolderOpen, Home, Info, Mail, Settings } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -151,7 +142,7 @@ export default function Navbar() {
                       {/* Theme toggle */}
                       <div className="flex items-center justify-between h-10 px-2">
                         <span className="text-sm">{t("navbar.theme")}</span>
-                        <ToggleTheme />
+                        <ToggleTheme variant="switch" />
                       </div>
                       <div className="border-t border-foreground/30"></div>
                       {/* Language switcher */}
