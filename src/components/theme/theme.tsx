@@ -28,15 +28,15 @@ export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
       <div
         dir="ltr"
         onClick={toggleTheme}
-        className={`w-12 h-7 flex items-center px-1 rounded-full cursor-pointer transition-colors duration-300 bg-foreground/50`}
+        className="w-12 h-7 flex items-center px-1 rounded-full cursor-pointer transition-colors duration-300 bg-foreground/50"
       >
         <div
-          className={`w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-300 ${
+          className={`w-5 h-5 rounded-full bg-foreground shadow-md transform transition-transform duration-300 ${
             theme === "dark" ? "translate-x-5" : "translate-x-0"
           } flex items-center justify-center`}
         >
           <img
-            src={theme === "dark" ? sun : moon}
+            src={theme === "dark" ? moon : sun}
             alt="Theme icon"
             className="w-4 h-4"
           />

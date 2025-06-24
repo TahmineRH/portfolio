@@ -11,7 +11,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex items-center gap-8">
-        <LangToggle />
+        <LangToggle variant="icon" />
         <ToggleTheme variant="icon" />
       </div>
     </div>

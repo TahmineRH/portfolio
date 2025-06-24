@@ -148,7 +148,7 @@ export default function Navbar() {
                       {/* Language switcher */}
                       <div className="flex items-center justify-between h-10 px-2">
                         <span className="text-sm">{t("navbar.language")}</span>
-                        <LangToggle />
+                        <LangToggle variant="switch" />
                       </div>
                     </PopoverContent>
                   </Popover>
