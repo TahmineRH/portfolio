@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import meme1 from "@/assets/memes/cheearz.webp";
 import dicaprio from "@/assets/memes/dicaprio.webp";
-import drake1 from "@/assets/memes/drake1.webp";
-import drake2 from "@/assets/memes/drake2.webp";
 import disaster from "@/assets/memes/disaster-girl.webp";
 import dog from "@/assets/memes/dog.webp";
+import drake1 from "@/assets/memes/drake1.webp";
+import drake2 from "@/assets/memes/drake2.webp";
+import { useTranslation } from "react-i18next";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 function Skilles() {
   const { t } = useTranslation();
