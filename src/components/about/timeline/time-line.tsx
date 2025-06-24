@@ -37,7 +37,7 @@ function Section({ title, text, image, reverse, maskDirection }: SectionProps) {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className={`w-full flex justify-between items-center max-md:flex-col max-md:mt-8 max-md:gap-8 ${
-          reverse ? "flex-row-reverse rtl:flex-row" : "rtl:flex-row-reverse"
+          reverse ? "flex-row-reverse rtl:md:flex-row" : "rtl:md:flex-row-reverse"
         }`}
       >
         <motion.img
