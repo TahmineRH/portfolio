@@ -16,11 +16,15 @@ function Skilles() {
         <h1 className="2xl:text-5xl text-4xl max-md:text-3xl font-medium">
           {t("skills.title")}
         </h1>
-        <h1 className="text-lg font-light max-md:text-base max-md:text-foreground/90">{t("skills.description")}</h1>
+        <h1 className="text-lg font-light max-md:text-base max-md:text-foreground/90">
+          {t("skills.description")}
+        </h1>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 group">
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">Frameworks & Libraries</h3>
+          <h3 className="font-medium text-xl max-md:text-lg">
+            {t("skills.frameworks")}
+          </h3>
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
@@ -37,16 +41,18 @@ function Skilles() {
                   />
                 </TooltipContent>
               </Tooltip>
-              , Next.js & CRA
+              , Next.js {t("skills.and")} CRA
             </li>
             <li>React Native</li>
             <li>Vue.js</li>
           </ul>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">UI & Styling</h3>
+          <h3 className="font-medium text-xl max-md:text-lg">
+            {t("skills.ui")}
+          </h3>
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
-            <li>Accessible HTML & CSS</li>
+            <li>Accessible HTML {t("skills.and")} CSS</li>
             <li>
               <Tooltip delayDuration={300}>
                 <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300  hover:cursor-pointer transition-colors">
@@ -83,7 +89,9 @@ function Skilles() {
           </ul>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">Languages</h3>
+          <h3 className="font-medium text-xl max-md:text-lg">
+            {t("skills.languages")}
+          </h3>
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
@@ -100,7 +108,7 @@ function Skilles() {
                   />
                 </TooltipContent>
               </Tooltip>{" "}
-              &{" "}
+              {t("skills.and")}{" "}
               <Tooltip delayDuration={300}>
                 <TooltipTrigger className="group-hover:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
                   TypeScript
@@ -119,7 +127,9 @@ function Skilles() {
           </ul>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">Other</h3>
+          <h3 className="font-medium text-xl max-md:text-lg">
+            {t("skills.other")}
+          </h3>
           <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>

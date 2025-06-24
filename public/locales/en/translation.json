@@ -38,7 +38,12 @@
   },
   "skills": {
     "title": "Skills and Tools",
-    "description": "Some of the languages, tools, and concepts I have experience with."
+    "description": "Some of the languages, tools, and concepts I have experience with.",
+    "frameworks": "Frameworks & Libraries",
+    "ui": "UI & Styling",
+    "languages": "Languages",
+    "other": "Other",
+    "and": "&"
   },
   "snapshot": {
     "title": "Projects Snapshot",
