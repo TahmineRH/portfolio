@@ -9,11 +9,11 @@ function Intro() {
 
   return (
     <div className="w-full flex max-md:flex-col max-md:items-center max-md:justify-center justify-between gap-20 max-md:gap-10 items-start md:h-dvh 2xl:pt-72 pt-52 max-md:pt-32">
-      <div className="flex flex-col gap-10 max-md:gap-8">
-        <h1 className="2xl:text-7xl text-6xl max-md:text-5xl w-200 max-md:w-auto font-medium max-md:leading-8 leading-20">
+      <div className="flex flex-col gap-10 max-md:gap-4">
+        <h1 className="2xl:text-7xl text-6xl max-md:text-4xl w-200 max-md:w-auto font-medium max-md:leading-8 leading-20">
           {t("name")}
         </h1>
-        <h1 className="text-lg max-md:text-base leading-8 max-md:leading-6 max-md:text-justify w-200 md:font-light max-md:text-foreground/80 max-md:w-full">
+        <h1 className="max-md:py-4 text-lg max-md:text-base leading-8 max-md:leading-6  w-200 md:font-light max-md:text-foreground/80 max-md:w-full">
           {t("intro")}
         </h1>
         <div className="flex gap-4">

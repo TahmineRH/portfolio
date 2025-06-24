@@ -8,7 +8,7 @@ import Home from "./pages/home";
 function App() {
   return (
     <Router>
-      <div className="mx-auto antialiased">
+      <div className="mx-auto antialiased max-w-6xl">
         <Navbar />
         <Header />
         <Routes>
@@ -17,8 +17,8 @@ function App() {
           <Route path="/projects" element={<Home />} />
           <Route path="/contact" element={<Home />} />
         </Routes>
-        <Footer />
       </div>
+        <Footer />
     </Router>
   );
 }

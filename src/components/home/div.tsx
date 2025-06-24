@@ -43,7 +43,7 @@ export default function ZoomDialogCards() {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
-    <div className="relative place-items-center 2xl:px-52 lg:px-40 2xl:py-4 h-full w-full">
+    <div className="relative place-items-center 2xl:py-4 h-full w-full">
       <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full ">
         {cards.map((card) => (
           <motion.div
