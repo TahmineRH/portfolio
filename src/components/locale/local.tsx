@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 type LangToggleProps = {
@@ -6,17 +7,22 @@ type LangToggleProps = {
 
 export default function LangToggle({ variant = "icon" }: LangToggleProps) {
   const { i18n } = useTranslation();
+  const isFa = i18n.language === "fa";
+
+  useEffect(() => {
+    const lang = i18n.language;
+    const dir = lang === "fa" ? "rtl" : "ltr";
+
+    document.documentElement.dir = dir;
+    document.documentElement.classList.remove("lang-fa", "lang-en");
+    document.documentElement.classList.add(`lang-${lang}`);
+  }, [i18n.language]);
 
   const toggleLang = () => {
     const newLang = i18n.language === "fa" ? "en" : "fa";
     i18n.changeLanguage(newLang);
     localStorage.setItem("lang", newLang);
-    document.documentElement.dir = newLang === "fa" ? "rtl" : "ltr";
-    document.documentElement.classList.remove("lang-fa", "lang-en");
-    document.documentElement.classList.add(`lang-${newLang}`);
   };
-
-  const isFa = i18n.language === "fa";
 
   if (variant === "switch") {
     return (
