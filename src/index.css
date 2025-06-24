@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 html.lang-fa {
-  font-family: "PlaypenSansArabic", system-ui, sans-serif;
+  font-family: dana, system-ui, sans-serif;
 }
 
 :root {
@@ -180,66 +180,65 @@ body {
 }
 /* arabic */
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Thin.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Danac/dana-thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-ExtraLight.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Dana/dana-extraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Light.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Dana/dana-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Regular.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Dana/dana-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Medium.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Dana/dana-medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-SemiBold.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Dana/dana-demiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-Bold.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Dana/dana-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "PlaypenSansArabic";
-  src: url("/fonts/Playpen-Sans-Arabic/PlaypenSansArabic-ExtraBold.ttf")
-    format("truetype");
+  font-family: dana;
+  src: url("/fonts/Playpen-Sans-Arabic/dana-extraBold.ttf") format("truetype");
   font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: dana;
+  src: url("/fonts/Playpen-Sans-Arabic/dana-black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -295,7 +294,8 @@ body {
   animation: staticNoise 20s infinite;
 }
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
