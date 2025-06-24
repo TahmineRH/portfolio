@@ -48,5 +48,9 @@
   "snapshot": {
     "title": "Projects Snapshot",
     "description": "Some of the side projects I've been working on in the last few months."
+  },
+  "footer": {
+    "slogan": "May your code be bug-free and your coffee always warm ☕",
+    "footerNote": "Designed & developed with calm tea and curious code"
   }
 }

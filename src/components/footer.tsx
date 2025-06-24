@@ -8,9 +8,13 @@ import cat from "@/assets/cat.png";
 import { motion } from "framer-motion";
 import { useThemeStore } from "../store/theme";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   const theme = useThemeStore((state) => state.theme);
+
   return (
     <footer className="relative mt-32 h-96 overflow-hidden ">
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -36,7 +40,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          “May your code be bug-free and your coffee always warm ☕”
+          {t("footer.slogan")}
         </motion.p>
         <motion.p
           className="text-sm opacity-70 mb-12"
@@ -44,24 +48,26 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <span className="transition-colors bg-gradient-to-r  from-foreground/[35%]  via-foreground/90 to-foreground/[35%] dark:from-neutral-300/[35%] dark:via-neutral-300/90  dark:to-neutral-300/[35%] bg-clip-text text-transparent">
-            Designed & developed with calm tea and curious code
-          </span>
-          ✨
+          <div className="flex items-center justify-center gap-1">
+            <span className="transition-colors bg-gradient-to-r  from-foreground/[35%]  via-foreground/90 to-foreground/[35%] dark:from-neutral-300/[35%] dark:via-neutral-300/90  dark:to-neutral-300/[35%] bg-clip-text text-transparent">
+              {t("footer.footerNote")}
+            </span>
+            ✨
+          </div>
         </motion.p>
         {/* ناوبری Cute */}
         <div className="flex justify-center gap-6 text-lg mb-8 font-semibold">
-          <Link to="/" className="hover:text-amber-600 transition-all">
-            Home
+          <Link to="/" className="hover:text-primary transition-all">
+            {t("navbar.home")}
           </Link>
-          <Link to="/about" className="hover:text-amber-600 transition-all">
-            About
+          <Link to="/about" className="hover:text-primary transition-all">
+            {t("navbar.about")}
           </Link>
-          <Link to="/projects" className="hover:text-amber-600 transition-all">
-            Projects
+          <Link to="/projects" className="hover:text-primary transition-all">
+            {t("navbar.projects")}
           </Link>
-          <Link to="/contact" className="hover:text-amber-600 transition-all">
-            Contact
+          <Link to="/contact" className="hover:text-primary transition-all">
+            {t("navbar.contact")}
           </Link>
         </div>
 
