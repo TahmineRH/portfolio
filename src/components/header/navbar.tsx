@@ -1,4 +1,11 @@
-import { FolderOpen, Home, Info, Mail, Settings } from "lucide-react";
+import {
+  EllipsisVertical,
+  FolderOpen,
+  Home,
+  Info,
+  Mail,
+  Settings,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -135,10 +142,14 @@ export default function Navbar() {
                             </span>
                           </div>
                         </div>
-                        {/* <EllipsisVertical className="h-5 text-foreground/70" /> */}
+                        <EllipsisVertical className="h-5 text-foreground/70" />
                       </div>
                     </PopoverTrigger>
-                    <PopoverContent className="w-40 space-y-2 bg-background/70 py-2 px-0">
+                    <PopoverContent
+                      side="bottom"
+                      align="end"
+                      className="w-40 space-y-2 bg-background/70 py-2 px-0"
+                    >
                       {/* Theme toggle */}
                       <div className="flex items-center justify-between h-10 px-2">
                         <span className="text-sm">{t("navbar.theme")}</span>
