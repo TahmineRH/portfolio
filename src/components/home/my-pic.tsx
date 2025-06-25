@@ -1,6 +1,7 @@
 import me1 from "@/assets/me/me1.png";
 import me2 from "@/assets/me/me2.png";
 import staticImg from "@/assets/static.gif";
+import { EvervaultCard } from "../ui/evervault-card";
 
 export const MyPic = () => {
   return (
@@ -14,6 +15,7 @@ export const MyPic = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <EvervaultCard/>
         <div
           draggable={false}
           onContextMenu={(e) => e.preventDefault()}

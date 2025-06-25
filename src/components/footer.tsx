@@ -49,7 +49,7 @@ export default function Footer() {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <div className="flex items-center justify-center gap-1">
-            <span className="transition-colors bg-gradient-to-r  from-foreground/[35%]  via-foreground/90 to-foreground/[35%] dark:from-neutral-300/[35%] dark:via-neutral-300/90  dark:to-neutral-300/[35%] bg-clip-text text-transparent">
+            <span className="transition-colors bg-gradient-to-r  from-foreground/[35%]  via-foreground/90 to-foreground/[35%] bg-na dark:from-neutral-300/[35%] dark:via-neutral-300/90  dark:to-neutral-300/[35%] bg-clip-text text-transparent">
               {t("footer.footerNote")}
             </span>
             ✨

@@ -49,6 +49,22 @@
     "title": "Projects Snapshot",
     "description": "Some of the side projects I've been working on in the last few months."
   },
+  "Testimonials": {
+    "title": "Some good words",
+    "description": "",
+    "alza": {
+      "name": "Alireza Arhane",
+      "role": "Fullstack Engineer & AI Specialist",
+      "company": "SiliconTech, Knowledge-Based Tech Co.",
+      "testimonial": "Tahmine is not only a great frontend engineer but an even better friend. She brings a unique mix of technical expertise and a warm, approachable personality that makes working with her a joy. Her deep knowledge of the JavaScript ecosystem—especially React, Next.js, and Tailwind CSS—constantly impresses me. She also has a sharp eye for design and works seamlessly with tools like Figma, bridging the gap between design and development effortlessly."
+    },
+    "arshia": {
+      "name": "Arshia Khozeimeh",
+      "role": "Backend Developer | Customer Success Specialist at ",
+      "company": "Zenphi, Inc.",
+      "testimonial": "Tahmine is one of the most impressive colleagues I’ve ever worked with. She brings passion to every project, embraces challenges, and is always eager to explore new frameworks and technologies. Whenever a difficult or overlooked project came up—ones others often avoided—Tahmine was the first to step in, driven by a desire to learn and grow. She is truly intrinsically motivated by her goals and values, and she stays focused regardless of external pressures or distractions. From a technical perspective, Tahmine consistently writes clean, well-structured code. Her teammates were always glad to see her name on a project, knowing they’d be working with code that’s easy to understand and build upon."
+    }
+  },
   "footer": {
     "slogan": "May your code be bug-free and your coffee always warm ☕",
     "footerNote": "Designed & developed with calm tea and curious code"

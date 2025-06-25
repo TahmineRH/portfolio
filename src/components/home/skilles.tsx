@@ -12,6 +12,7 @@ function Skilles() {
 
   return (
     <div className="flex flex-col gap-10">
+      
       <div className="flex flex-col gap-4 justify-center max-md:gap-1">
         <h1 className="2xl:text-5xl text-4xl max-md:text-3xl font-medium">
           {t("skills.title")}
@@ -21,11 +22,11 @@ function Skilles() {
         </h1>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 group">
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">
+        <div className="flex flex-col gap-4 max-md:gap-8">
+          <h3 className="font-medium text-xl max-md:text-base">
             {t("skills.frameworks")}
           </h3>
-          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-3 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
                 <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
@@ -47,11 +48,11 @@ function Skilles() {
             <li>Vue.js</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">
+        <div className="flex flex-col gap-4 max-md:gap-8">
+          <h3 className="font-medium text-xl max-md:text-base">
             {t("skills.ui")}
           </h3>
-          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-3 max-md:text-foreground/80">
             <li>Accessible HTML {t("skills.and")} CSS</li>
             <li>
               <Tooltip delayDuration={300}>
@@ -88,11 +89,11 @@ function Skilles() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">
+        <div className="flex flex-col gap-4 max-md:gap-8">
+          <h3 className="font-medium text-xl max-md:text-base">
             {t("skills.languages")}
           </h3>
-          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-3 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
                 <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">
@@ -126,11 +127,11 @@ function Skilles() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium text-xl max-md:text-lg">
+        <div className="flex flex-col gap-4 max-md:gap-8">
+          <h3 className="font-medium text-xl max-md:text-base">
             {t("skills.other")}
           </h3>
-          <ul className="text-sm flex flex-col gap-4 max-md:gap-6 max-md:text-foreground/80">
+          <ul className="text-sm flex flex-col gap-4 max-md:gap-3 max-md:text-foreground/80">
             <li>
               <Tooltip delayDuration={300}>
                 <TooltipTrigger className="group-hover:text-secondary max-md:text-secondary hover:!text-secondary focus:!text-secondary duration-300 hover:cursor-pointer">

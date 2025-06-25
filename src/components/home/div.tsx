@@ -43,8 +43,12 @@ export default function ZoomDialogCards() {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
-    <div className="relative place-items-center 2xl:py-4 h-full w-full">
-      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full ">
+    <div className="relative flex justify-start h-full w-full ">
+      <div className="hero-preview-animation max-md:hidden">
+        <div className="hero-preview-animation-line"></div>
+      </div>
+
+      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full z-10 p-0.5 ">
         {cards.map((card) => (
           <motion.div
             key={card.id}
