@@ -5,6 +5,7 @@ import hesamsanat from "@/assets/p1.png";
 import treeD from "@/assets/3d.png";
 import ai from "@/assets/AI.png";
 import { cn } from "../../lib/utils";
+import { MovingBorderWrapper } from "../ui/moving-border";
 
 const cards = [
   {
@@ -43,29 +44,35 @@ export default function ZoomDialogCards() {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
-    <div className="relative flex justify-start h-full w-full ">
-      <div className="hero-preview-animation max-md:hidden">
-        <div className="hero-preview-animation-line"></div>
-      </div>
-
+    <div className="relative flex justify-start h-full w-full overflow-hidden p-1">
       <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full z-10 p-0.5 ">
         {cards.map((card) => (
-          <motion.div
-            key={card.id}
-            layoutId={`card-${card.id}`}
-            className={cn(
-              `rounded-lg bg-card max-lg:col-span-7 col-span-${card.col} flex items-center justify-center text-center overflow-hidden`
+          <MovingBorderWrapper
+            duration={10000}
+            borderRadius="0.75rem"
+            containerClassName={cn(
+              `max-lg:col-span-7 col-span-${card.col}`,
+              activeCard && "opacity-0"
             )}
-            onClick={() => setActiveCard(card)}
+            key={card.id}
           >
-            <img
-              src={card.picture}
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full max-lg:h-80 max-md:h-64 object-contain "
-              alt={`project-${card.id}`}
-            />
-          </motion.div>
+            <motion.div
+              layoutId={`card-${card.id}`}
+              key={card.id}
+              className={cn(
+                `rounded-lg bg-card/90 h-full  flex items-center justify-center text-center overflow-hidden`
+              )}
+              onClick={() => setActiveCard(card)}
+            >
+              <img
+                src={card.picture}
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                className="w-full h-full max-lg:h-80 max-md:h-64 object-contain "
+                alt={`project-${card.id}`}
+              />
+            </motion.div>
+          </MovingBorderWrapper>
         ))}
       </div>
 

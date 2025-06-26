@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -6,46 +6,41 @@ import {
   useMotionValue,
   useTransform,
 } from "motion/react";
-import { useRef } from "react";
 import { cn } from "../../lib/utils";
 
-export function Button({
-  borderRadius = "1.75rem",
+export function MovingBorderWrapper({
   children,
-  as: Component = "button",
+  borderRadius = "0.25rem",
+  duration = 3000,
   containerClassName,
   borderClassName,
-  duration,
-  className,
-  ...otherProps
+  rx = "10%",
+  ry = "30%",
 }: {
-  borderRadius?: string;
   children: React.ReactNode;
-  as?: React.ElementType;
+  borderRadius?: string;
+  duration?: number;
   containerClassName?: string;
   borderClassName?: string;
-  duration?: number;
-  className?: string;
-} & React.ComponentPropsWithoutRef<"button">) {
+  rx?: string;
+  ry?: string;
+}) {
   return (
-    <Component
+    <div
       className={cn(
-        "relative h-96 w-full overflow-hidden bg-transparent p-[1px] text-xl",
+        "relative w-full overflow-hidden p-[1px]",
         containerClassName
       )}
-      style={{
-        borderRadius: borderRadius,
-      }}
-      {...otherProps}
+      style={{ borderRadius }}
     >
       <div
         className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
-        <MovingBorder duration={duration} rx="30%" ry="30%">
+        <MovingBorder duration={duration} rx={rx} ry={ry}>
           <div
             className={cn(
-              "h-20 w-20 bg-[radial-gradient(#fdfdfd_40%,transparent_60%)] opacity-[0.8]",
+              "h-20 w-20 dark:bg-[radial-gradient(#fdd68a_40%,transparent_60%)] bg-[radial-gradient(#d08700_40%,transparent_60%)] opacity-[0.8] ",
               borderClassName
             )}
           />
@@ -53,23 +48,18 @@ export function Button({
       </div>
 
       <div
-        className={cn(
-          "relative flex h-full w-full items-center justify-center border border-slate-800  text-sm text-white antialiased backdrop-blur-xl",
-          className
-        )}
-        style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
-        }}
+        className="relative z-10 w-full h-full border border-zinc-400/20 backdrop-blur-xl"
+        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
         {children}
       </div>
-    </Component>
+    </div>
   );
 }
 
 export const MovingBorder = ({
   children,
-  duration = 3000,
+  duration = 900,
   rx,
   ry,
   svgProps,

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import ZoomDialogCards from "./div";
+import ZoomDialogCards from "./project-card";
 
 function SnapshotProject() {
   const { t } = useTranslation();
