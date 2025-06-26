@@ -51,11 +51,11 @@
   },
   "Testimonials": {
     "title": "Some good words",
-    "description": "",
+    "description": "Some feedback from the people I've had the privilege of working with.",
     "alza": {
       "name": "Alireza Arhane",
       "role": "Fullstack Engineer & AI Specialist",
-      "company": "SiliconTech, Knowledge-Based Tech Co.",
+      "company": "SiliconTech Knowledge-Based Tech Co.",
       "testimonial": "Tahmine is not only a great frontend engineer but an even better friend. She brings a unique mix of technical expertise and a warm, approachable personality that makes working with her a joy. Her deep knowledge of the JavaScript ecosystem—especially React, Next.js, and Tailwind CSS—constantly impresses me. She also has a sharp eye for design and works seamlessly with tools like Figma, bridging the gap between design and development effortlessly."
     },
     "arshia": {
