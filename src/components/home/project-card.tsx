@@ -45,24 +45,22 @@ export default function ZoomDialogCards() {
 
   return (
     <div className="relative flex justify-start h-full w-full overflow-hidden p-1">
-      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full z-10 p-0.5 ">
+      <div className="grid grid-cols-7 2xl:gap-8 gap-4 h-full w-full z-10">
         {cards.map((card) => (
-          <MovingBorderWrapper
-            duration={10000}
-            borderRadius="0.75rem"
-            containerClassName={cn(
-              `max-lg:col-span-7 col-span-${card.col}`,
-              activeCard && "opacity-0"
-            )}
+          <motion.div
+            layoutId={`card-${card.id}`}
             key={card.id}
+            className={cn(
+              `rounded-[0.75rem] bg-card/90 h-full  flex items-center justify-center text-center overflow-hidden max-lg:col-span-7 col-span-${card.col}`
+            )}
+            onClick={() => setActiveCard(card)}
           >
-            <motion.div
-              layoutId={`card-${card.id}`}
+            <MovingBorderWrapper
+              duration={10000}
+              initialProgress={Math.random() * 10000}
+              borderRadius="0.75rem"
+              containerClassName="w-full h-full "
               key={card.id}
-              className={cn(
-                `rounded-lg bg-card/90 h-full  flex items-center justify-center text-center overflow-hidden`
-              )}
-              onClick={() => setActiveCard(card)}
             >
               <img
                 src={card.picture}
@@ -71,8 +69,8 @@ export default function ZoomDialogCards() {
                 className="w-full h-full max-lg:h-80 max-md:h-64 object-contain "
                 alt={`project-${card.id}`}
               />
-            </motion.div>
-          </MovingBorderWrapper>
+            </MovingBorderWrapper>
+          </motion.div>
         ))}
       </div>
 

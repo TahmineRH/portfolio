@@ -14,17 +14,21 @@ export function MovingBorderWrapper({
   duration = 3000,
   containerClassName,
   borderClassName,
+  initialProgress = Math.random() * 1000,
   rx = "10%",
   ry = "30%",
 }: {
   children: React.ReactNode;
   borderRadius?: string;
   duration?: number;
+  initialProgress?: number;
   containerClassName?: string;
   borderClassName?: string;
   rx?: string;
   ry?: string;
 }) {
+  const randomStart = useRef(Math.random() * 1000);
+
   return (
     <div
       className={cn(
@@ -37,10 +41,15 @@ export function MovingBorderWrapper({
         className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
-        <MovingBorder duration={duration} rx={rx} ry={ry}>
+        <MovingBorder
+          duration={duration}
+          rx={rx}
+          ry={ry}
+          initialProgress={initialProgress + randomStart.current}
+        >
           <div
             className={cn(
-              "h-20 w-20 dark:bg-[radial-gradient(#fdd68a_40%,transparent_60%)] bg-[radial-gradient(#d08700_40%,transparent_60%)] opacity-[0.8] ",
+              "h-32 w-32 dark:bg-[radial-gradient(#fdd68a_40%,transparent_60%)] bg-[radial-gradient(#d08700_40%,transparent_60%)] opacity-[0.8]",
               borderClassName
             )}
           />
@@ -48,7 +57,7 @@ export function MovingBorderWrapper({
       </div>
 
       <div
-        className="relative z-10 w-full h-full border border-zinc-400/20 backdrop-blur-xl"
+        className="relative z-10 w-full h-full border border-zinc-400/20 backdrop-blur-3xl"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
         {children}
@@ -62,6 +71,7 @@ export const MovingBorder = ({
   duration = 900,
   rx,
   ry,
+  initialProgress = 0,
   svgProps,
   rectProps,
 }: {
@@ -69,27 +79,28 @@ export const MovingBorder = ({
   duration?: number;
   rx?: string;
   ry?: string;
+  initialProgress?: number;
   svgProps?: React.SVGProps<SVGSVGElement>;
   rectProps?: React.SVGProps<SVGRectElement>;
 }) => {
   const pathRef = useRef<SVGRectElement>(null);
-  const progress = useMotionValue<number>(0);
+  const progress = useMotionValue<number>(initialProgress);
 
   useAnimationFrame((time) => {
     const length = pathRef.current?.getTotalLength();
     if (length) {
-      const pxPerMillisecond = length / duration;
-      progress.set((time * pxPerMillisecond) % length);
+      const pxPerMs = length / duration;
+      progress.set(((time + initialProgress) * pxPerMs) % length);
     }
   });
 
   const x = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).x
+    (val) => pathRef.current?.getPointAtLength(val)?.x
   );
   const y = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).y
+    (val) => pathRef.current?.getPointAtLength(val)?.y
   );
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
