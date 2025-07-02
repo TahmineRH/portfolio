@@ -127,7 +127,7 @@ export default function ZoomDialogCards() {
     }),
     []
   );
-  
+
   const { t } = useTranslation();
 
   const cards = [
@@ -145,7 +145,6 @@ export default function ZoomDialogCards() {
       title: t("Projects.second.name"),
       summary: t("Projects.second.summary"),
       tools: "Next.js, TypeScript, Tailwind, Shadcn/UI, CMS (TinyMCE), Motion"
-
         .split(",")
         .map((tool) => tool.trim() as ToolName),
       col: 3,

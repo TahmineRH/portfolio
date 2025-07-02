@@ -92,7 +92,7 @@
         "4": "Display completed projects on an interactive map with project details",
         "5": "Deliver an engaging user experience using animations and interactions"
       },
-      "Features": {
+      "features": {
         "1": "Supports 5 languages: Persian, Arabic, Urdu, English, and Turkish",
         "2": "Light and dark themes with manual switch",
         "3": "Advanced product filtering by category, price, and application type",

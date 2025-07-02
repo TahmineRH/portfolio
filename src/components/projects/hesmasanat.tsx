@@ -37,37 +37,68 @@ function Hesamsanat() {
           <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
             {t("Projects.titles.goals")}
           </h2>
-          <p>{t("Projects.second.goals")}</p>
+          <ul>
+            {[...Array(5)].map((_, i) => (
+              <li key={i}>{t(`Projects.second.goals.${i + 1}`)}</li>
+            ))}
+          </ul>
         </div>
         <div>
           <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
             {t("Projects.titles.tools")}
           </h2>
-          <p>{t("Projects.second.tools")}</p>
+          <ul>
+            {[...Array(4)].map((_, i) => (
+              <li key={i}>{t(`Projects.second.tools.${i + 1}`)}</li>
+            ))}
+          </ul>
         </div>
         <div>
           <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
             {t("Projects.titles.features")}
           </h2>
-          <p>{t("Projects.second.features")}</p>
+          <ul>
+            {[...Array(9)].map((_, i) => (
+              <li key={i}>{t(`Projects.second.features.${i + 1}`)}</li>
+            ))}
+          </ul>
         </div>
         <div>
           <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
             {t("Projects.titles.chalenges")}
           </h2>
-          <p>{t("Projects.second.chalenges")}</p>
+          <ul>
+            {[...Array(3)].map((_, i) => (
+              <>
+                <li key={i}>
+                  {t(`Projects.second.chalenges.chalenge${i + 1}`)}
+                </li>
+                <li key={i}>
+                  {t(`Projects.second.chalenges.solution${i + 1}`)}
+                </li>
+              </>
+            ))}
+          </ul>
         </div>
         <div>
           <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
             {t("Projects.titles.demo")}
           </h2>
-          <p>{t("Projects.second.demo")}</p>
+          <ul>
+            {[...Array(9)].map((_, i) => (
+              <li key={i}>{t(`Projects.second.features.${i + 1}`)}</li>
+            ))}
+          </ul>
         </div>
         <div>
           <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
             {t("Projects.titles.lessons")}
           </h2>
-          <p>{t("Projects.second.lessons")}</p>
+          <ul>
+            {[...Array(4)].map((_, i) => (
+              <li key={i}>{t(`Projects.second.lessons.${i + 1}`)}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </main>
