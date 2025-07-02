@@ -8,7 +8,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { cn } from "../../lib/utils";
-import { useTechIcons, type ToolName } from "../projects/TechIcons";
+import { useTechIcons, type ToolName } from "../projects/tech-icons";
 import { Button } from "../ui/button";
 import { MovingBorderWrapper } from "../ui/moving-border";
 

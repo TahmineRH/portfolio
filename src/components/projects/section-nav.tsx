@@ -18,7 +18,7 @@ function SectionNav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.innerHeight * 0.2; // 20% از بالای ویوپورت
+      const offset = window.innerHeight * 0.2;
 
       let closestSectionId = "";
       let closestDistance = Infinity;
@@ -42,7 +42,7 @@ function SectionNav() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // برای بار اول
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -61,7 +61,7 @@ function SectionNav() {
   };
 
   return (
-    <ul className="flex flex-col gap-4 border border-foreground/10 rounded-lg p-6 sticky top-32 z-20 h-fit min-w-60">
+    <ul className="max-lg:hidden flex flex-col gap-4 border border-foreground/10 rounded-lg p-6 sticky top-32 z-20 h-fit min-w-60">
       {sections.map(({ id, key }) => (
         <li
           key={id}

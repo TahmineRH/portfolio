@@ -35,7 +35,7 @@ export const useTechIcons = () => {
       TypeScript: (
         <Tooltip>
           <TooltipTrigger>
-            <TypeScript className="h-4 w-4 text-foreground rounded-sm" />
+            <TypeScript className="h-4 w-4 text-foreground rounded-xs" />
           </TooltipTrigger>
           <TooltipContent>
             <p>TypeScript</p>
@@ -65,7 +65,7 @@ export const useTechIcons = () => {
       JavaScript: (
         <Tooltip>
           <TooltipTrigger>
-            <JavaScript className="h-4 w-4 text-foreground rounded-sm" />
+            <JavaScript className="h-4 w-4 text-foreground rounded-xs" />
           </TooltipTrigger>
           <TooltipContent>
             <p>JavaScript</p>
