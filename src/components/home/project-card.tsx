@@ -1,24 +1,16 @@
 import treeD from "@/assets/3d.png";
 import ai from "@/assets/AI.png";
-import { ReactComponent as MotionLib } from "@/assets/icons/motion.svg";
-import { ReactComponent as NextIcon } from "@/assets/icons/nextjs.svg";
-import { ReactComponent as Shadcn } from "@/assets/icons/shadcn.svg";
-import { ReactComponent as Tailwind } from "@/assets/icons/tailwindcss.svg";
-import { ReactComponent as Threejs } from "@/assets/icons/threejs.svg";
 import hesamsanat from "@/assets/p1.png";
 import travel from "@/assets/travel.png";
 import { ChevronRight, LinkIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useMemo, useState, type JSX } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import JavaScript from "../../assets/icons/javaScript";
-import TinyMCE from "../../assets/icons/tinymce";
-import TypeScript from "../../assets/icons/typescript";
 import { cn } from "../../lib/utils";
+import { useTechIcons, type ToolName } from "../projects/TechIcons";
 import { Button } from "../ui/button";
 import { MovingBorderWrapper } from "../ui/moving-border";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type Card = {
   id: number;
@@ -31,104 +23,10 @@ type Card = {
   col: number;
 };
 
-export default function ZoomDialogCards() {
-  type ToolName =
-    | "Next.js"
-    | "TypeScript"
-    | "Tailwind"
-    | "Shadcn/UI"
-    | "JavaScript"
-    | "CMS (TinyMCE)"
-    | "Motion"
-    | "Three.js";
-
-  const techIcons: Record<ToolName, JSX.Element> = useMemo(
-    () => ({
-      "Next.js": (
-        <Tooltip>
-          <TooltipTrigger>
-            <NextIcon className="h-4 w-4 text-foreground rounded-full" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Next.js</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      TypeScript: (
-        <Tooltip>
-          <TooltipTrigger>
-            <TypeScript className="h-4 w-4 text-foreground rounded-sm" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>TypeScript</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      Tailwind: (
-        <Tooltip>
-          <TooltipTrigger>
-            <Tailwind className="h-4 w-4 text-foreground" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Tailwind CSS</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      "Shadcn/UI": (
-        <Tooltip>
-          <TooltipTrigger>
-            <Shadcn className="h-4 w-4 text-foreground" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Shadcn/UI</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      JavaScript: (
-        <Tooltip>
-          <TooltipTrigger>
-            <JavaScript className="h-4 w-4 text-foreground rounded-sm" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>JavaScript</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      "CMS (TinyMCE)": (
-        <Tooltip>
-          <TooltipTrigger>
-            <TinyMCE className="h-4 w-4 text-foreground" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>TinyMCE</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      Motion: (
-        <Tooltip>
-          <TooltipTrigger>
-            <MotionLib className="h-4 text-foreground" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Motion</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-      "Three.js": (
-        <Tooltip>
-          <TooltipTrigger>
-            <Threejs className="h-4 w-4 text-foreground" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Three.js</p>
-          </TooltipContent>
-        </Tooltip>
-      ),
-    }),
-    []
-  );
-
+export default function ProjectCards() {
   const { t } = useTranslation();
+
+  const techIcons = useTechIcons();
 
   const cards = [
     {
@@ -144,7 +42,7 @@ export default function ZoomDialogCards() {
       id: 2,
       title: t("Projects.second.name"),
       summary: t("Projects.second.summary"),
-      tools: "Next.js, TypeScript, Tailwind, Shadcn/UI, CMS (TinyMCE), Motion"
+      tools: t("Projects.second.tools")
         .split(",")
         .map((tool) => tool.trim() as ToolName),
       col: 3,

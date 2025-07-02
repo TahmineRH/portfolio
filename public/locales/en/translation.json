@@ -85,6 +85,7 @@
       "name": "Hesam Sanat Shargh",
       "summary": "A multilingual website for introducing and selling Hesam Sanat factory's products, including park and street lights and urban furniture — designed with SEO focus and dual themes.",
       "description": "A multilingual website for showcasing and selling Hesam Sanat factory’s products such as park lights, street lights, and urban furniture. The website focuses on SEO, features modern UI, light and dark themes, project map integration, online PDF viewer, and a lightweight admin panel.",
+      "tools": "Next.js, TypeScript, Tailwind, Shadcn/UI, CMS (TinyMCE), Motion",
       "goals": {
         "1": "Enhance SEO using server-side rendering for product and blog pages",
         "2": "Create a smooth multilingual experience for international users",
