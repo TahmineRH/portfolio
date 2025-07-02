@@ -127,6 +127,7 @@ export default function ZoomDialogCards() {
     }),
     []
   );
+  
   const { t } = useTranslation();
 
   const cards = [
@@ -143,7 +144,8 @@ export default function ZoomDialogCards() {
       id: 2,
       title: t("Projects.second.name"),
       summary: t("Projects.second.summary"),
-      tools: t("Projects.second.tools")
+      tools: "Next.js, TypeScript, Tailwind, Shadcn/UI, CMS (TinyMCE), Motion"
+
         .split(",")
         .map((tool) => tool.trim() as ToolName),
       col: 3,
@@ -239,7 +241,7 @@ export default function ZoomDialogCards() {
                   damping: 15,
                 }}
               >
-                <div className="absolute inset-0 flex flex-col justify-around backdrop-blur-sm p-4 md:p-8">
+                <div className="absolute inset-0 flex flex-col justify-around backdrop-blur-lg p-4 md:p-8">
                   <div className="flex flex-col gap-6">
                     <h2 className="text-2xl font-bold">{activeCard.title}</h2>
                     <p className="text-balance ">{activeCard.summary}</p>

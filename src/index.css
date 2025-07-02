@@ -31,7 +31,7 @@ html.lang-fa {
   --muted-foreground: oklch(0.5045 0.2009 27.06);
   --accent: oklch(0.5045 0.2009 27.06);
   --accent-foreground: oklch(0.9647 0.0322 76.99);
-  --border: oklch(0.8935 0.1041 83.88);
+  --border: oklch(0.5045 0.2009 27.06);
   --input: oklch(0.8935 0.1041 83.88);
   --ring: oklch(0.7155 0.1442 27.46);
   --sidebar: oklch(0.8935 0.1041 83.88);
@@ -106,7 +106,7 @@ body {
   --muted-foreground: oklch(0.9647 0.0322 76.99);
   --accent: oklch(0.8935 0.1041 83.88);
   --accent-foreground: oklch(0.2476 0.0473 22.22);
-  --border: oklch(0.5045 0.2009 27.06);
+  --border: oklch(0.8935 0.1041 83.88);
   --input: oklch(0.5045 0.2009 27.06);
   --ring: oklch(0.7155 0.1442 27.46);
   --sidebar: oklch(0.5045 0.2009 27.06);

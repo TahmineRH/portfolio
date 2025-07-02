@@ -1,9 +1,8 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/footer";
 import Header from "./components/header/header";
 import Navbar from "./components/header/navbar";
-import About from "./pages/about";
-import Home from "./pages/home";
+import AppRoutes from "./route";
 
 function App() {
   return (
@@ -11,12 +10,7 @@ function App() {
       <div className="mx-auto antialiased max-w-6xl">
         <Navbar />
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Home />} />
-          <Route path="/contact" element={<Home />} />
-        </Routes>
+        <AppRoutes />
       </div>
       <Footer />
     </Router>
