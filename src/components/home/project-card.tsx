@@ -154,7 +154,7 @@ export default function ProjectCards() {
                   <div className="flex justify-between mt-6">
                     <Link to={activeCard.more}>
                       <Button className="flex items-center justify-center gap-2">
-                        {t("Projects.titles.view")} <ChevronRight />
+                        {t("Projects.titles.view")} <ChevronRight className="rtl:rotate-180" />
                       </Button>
                     </Link>
                     {activeCard.link && (
@@ -167,7 +167,7 @@ export default function ProjectCards() {
                           variant={"link"}
                           className="group flex items-center justify-center gap-2"
                         >
-                          <LinkIcon className="group-hover:text-secondary" />
+                          <LinkIcon className="group-hover:text-secondary " />
                           {t("Projects.titles.live")}
                         </Button>
                       </Link>
