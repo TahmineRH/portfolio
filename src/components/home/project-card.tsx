@@ -1,46 +1,176 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import travel from "@/assets/travel.png";
-import hesamsanat from "@/assets/p1.png";
 import treeD from "@/assets/3d.png";
 import ai from "@/assets/AI.png";
+import { ReactComponent as MotionLib } from "@/assets/icons/motion.svg";
+import { ReactComponent as NextIcon } from "@/assets/icons/nextjs.svg";
+import { ReactComponent as Shadcn } from "@/assets/icons/shadcn.svg";
+import { ReactComponent as Tailwind } from "@/assets/icons/tailwindcss.svg";
+import { ReactComponent as Threejs } from "@/assets/icons/threejs.svg";
+import hesamsanat from "@/assets/p1.png";
+import travel from "@/assets/travel.png";
+import { ChevronRight, LinkIcon } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useMemo, useState, type JSX } from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import JavaScript from "../../assets/icons/javaScript";
+import TinyMCE from "../../assets/icons/tinymce";
+import TypeScript from "../../assets/icons/typescript";
 import { cn } from "../../lib/utils";
+import { Button } from "../ui/button";
 import { MovingBorderWrapper } from "../ui/moving-border";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
-const cards = [
-  {
-    id: 1,
-    title: "Card One",
-    content: "This is card one",
-    col: 4,
-    picture: treeD,
-  },
-  {
-    id: 2,
-    title: "Card Two",
-    content: "This is card two",
-    col: 3,
-    picture: hesamsanat,
-  },
-  {
-    id: 4,
-    title: "Card Four",
-    content: "This is card four",
-    col: 3,
-    picture: travel,
-  },
-  {
-    id: 3,
-    title: "Card Three",
-    content: "This is card three",
-    col: 4,
-    picture: ai,
-  },
-];
-
-type Card = { id: number; title: string; content: string; picture: string };
+type Card = {
+  id: number;
+  title: string;
+  summary: string;
+  picture: string;
+  link?: string;
+  more: string;
+  tools: string[];
+  col: number;
+};
 
 export default function ZoomDialogCards() {
+  type ToolName =
+    | "Next.js"
+    | "TypeScript"
+    | "Tailwind"
+    | "Shadcn/UI"
+    | "JavaScript"
+    | "CMS (TinyMCE)"
+    | "Motion"
+    | "Three.js";
+
+  const techIcons: Record<ToolName, JSX.Element> = useMemo(
+    () => ({
+      "Next.js": (
+        <Tooltip>
+          <TooltipTrigger>
+            <NextIcon className="h-4 w-4 text-foreground rounded-full" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Next.js</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      TypeScript: (
+        <Tooltip>
+          <TooltipTrigger>
+            <TypeScript className="h-4 w-4 text-foreground rounded-sm" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>TypeScript</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      Tailwind: (
+        <Tooltip>
+          <TooltipTrigger>
+            <Tailwind className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Tailwind CSS</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      "Shadcn/UI": (
+        <Tooltip>
+          <TooltipTrigger>
+            <Shadcn className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Shadcn/UI</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      JavaScript: (
+        <Tooltip>
+          <TooltipTrigger>
+            <JavaScript className="h-4 w-4 text-foreground rounded-sm" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>JavaScript</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      "CMS (TinyMCE)": (
+        <Tooltip>
+          <TooltipTrigger>
+            <TinyMCE className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>TinyMCE</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      Motion: (
+        <Tooltip>
+          <TooltipTrigger>
+            <MotionLib className="h-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Motion</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      "Three.js": (
+        <Tooltip>
+          <TooltipTrigger>
+            <Threejs className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Three.js</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+    }),
+    []
+  );
+  const { t } = useTranslation();
+
+  const cards = [
+    {
+      id: 1,
+      title: "Card One",
+      summary: "This is card one",
+      tools: [],
+      col: 4,
+      picture: treeD,
+      more: "/projects",
+    },
+    {
+      id: 2,
+      title: t("Projects.second.name"),
+      summary: t("Projects.second.summary"),
+      tools: t("Projects.second.tools")
+        .split(",")
+        .map((tool) => tool.trim() as ToolName),
+      col: 3,
+      picture: hesamsanat,
+      link: "https://hesamsanat.com/en",
+      more: "/projects/hesamsanat",
+    },
+    {
+      id: 4,
+      title: "Card Four",
+      summary: "This is card four",
+      tools: [],
+      col: 3,
+      picture: travel,
+      more: "/projects",
+    },
+    {
+      id: 3,
+      title: "Card Three",
+      summary: "This is card three",
+      tools: [],
+      col: 4,
+      picture: ai,
+      more: "/projects",
+    },
+  ];
+
   const [activeCard, setActiveCard] = useState<Card | null>(null);
 
   return (
@@ -87,7 +217,7 @@ export default function ZoomDialogCards() {
 
             <motion.div
               layoutId={`card-${activeCard.id}`}
-              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl max-md:w-sm max-md:h-96 h-[80vh] rounded-xl shadow-2xl overflow-hidden"
+              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl max-md:w-sm max-md:h-[50vh] h-[80vh] rounded-xl shadow-2xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
               <div className="relative w-full h-full px-12">
@@ -100,7 +230,7 @@ export default function ZoomDialogCards() {
                 />
               </div>
               <motion.div
-                className="fixed bottom-0 left-0 w-full h-52 bg-black/50 z-20"
+                className="fixed bottom-0 left-0 w-full h-72 max-md:h-80 bg-black/60 z-20"
                 initial={{ y: 400 }}
                 animate={{ y: 20 }}
                 exit={{ y: 300 }}
@@ -109,11 +239,41 @@ export default function ZoomDialogCards() {
                   damping: 15,
                 }}
               >
-                <div className="absolute inset-0 flex flex-col items-center justify-center backdrop-blur-sm">
-                  <h2 className="text-3xl font-bold mb-2">
-                    {activeCard.title}
-                  </h2>
-                  <p className="text-lg">{activeCard.content}</p>
+                <div className="absolute inset-0 flex flex-col justify-around backdrop-blur-sm p-4 md:p-8">
+                  <div className="flex flex-col gap-6">
+                    <h2 className="text-2xl font-bold">{activeCard.title}</h2>
+                    <p className="text-balance ">{activeCard.summary}</p>
+                    <div className="text-sm flex items-center gap-4">
+                      {t("Projects.titles.tools")}:
+                      <ul className="flex flex-wrap gap-2 items-end">
+                        {activeCard.tools.map((tool, i) => (
+                          <li key={i}>{techIcons[tool as ToolName] || null}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="flex justify-between mt-6">
+                    <Link to={activeCard.more}>
+                      <Button className="flex items-center justify-center gap-2">
+                        {t("Projects.titles.view")} <ChevronRight />
+                      </Button>
+                    </Link>
+                    {activeCard.link && (
+                      <Link
+                        to={activeCard.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button
+                          variant={"link"}
+                          className="group flex items-center justify-center gap-2"
+                        >
+                          <LinkIcon className="group-hover:text-secondary" />
+                          {t("Projects.titles.live")}
+                        </Button>
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             </motion.div>

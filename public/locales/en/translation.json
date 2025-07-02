@@ -68,5 +68,56 @@
   "footer": {
     "slogan": "May your code be bug-free and your coffee always warm ☕",
     "footerNote": "Designed & developed with calm tea and curious code"
+  },
+  "Projects": {
+    "titles": {
+      "description": "Short Explanation",
+      "tools": "Tools & Technologies",
+      "goals": "Project Goals",
+      "features": "Features",
+      "chalenges": "Challenges & Solutions",
+      "lessons": "Lessons Learned",
+      "demo": "Demo & Screenshots",
+      "view": "View Project",
+      "live": "Open Live Site"
+    },
+    "second": {
+      "name": "Hesam Sanat Shargh",
+      "summary": "A multilingual website for introducing and selling Hesam Sanat factory's products, including park and street lights and urban furniture — designed with SEO focus and dual themes.",
+      "description": "A multilingual website for showcasing and selling Hesam Sanat factory’s products such as park lights, street lights, and urban furniture. The website focuses on SEO, features modern UI, light and dark themes, project map integration, online PDF viewer, and a lightweight admin panel.",
+      "tools": "Next.js, TypeScript, Tailwind, Shadcn/UI, CMS (TinyMCE), Motion",
+      "goals": {
+        "1": "Enhance SEO using server-side rendering for product and blog pages",
+        "2": "Create a smooth multilingual experience for international users",
+        "3": "Design a lightweight admin panel for easy content editing by the factory team",
+        "4": "Display completed projects on an interactive map with project details",
+        "5": "Deliver an engaging user experience using animations and interactions"
+      },
+      "Features": {
+        "1": "Supports 5 languages: Persian, Arabic, Urdu, English, and Turkish",
+        "2": "Light and dark themes with manual switch",
+        "3": "Advanced product filtering by category, price, and application type",
+        "4": "Interactive project map with modal for details",
+        "5": "Online PDF catalog viewer without requiring downloads",
+        "6": "Product inquiry form and job application (CV submission) form",
+        "7": "Blog and exhibition sections managed via a simple CMS",
+        "8": "Responsive and modern admin panel for content management",
+        "9": "Uses Embla Carousel for smooth and lightweight sliders"
+      },
+      "chalenges": {
+        "chalenge1": "Displaying PDF files natively in the browser",
+        "solution1": "Used a combination of react-pdf and pdfjs-dist for seamless rendering",
+        "chalenge2": "Supporting 5 languages with dynamic routing",
+        "solution2": "Implemented next-intl within the /[locale] route structure",
+        "chalenge3": "Displaying projects on a map with detail modals in both the main site and admin panel",
+        "solution3": "Used Leaflet and React Leaflet with dynamic markers. Project data was shown in modals and multilingual routing handled via next-intl"
+      },
+      "lessons": {
+        "1": "Integrating SSR and i18n using Next.js App Router requires precise structure and planning",
+        "2": "Gained experience in rendering interactive and professional PDFs within the browser",
+        "3": "Built interactive project maps using React Leaflet which significantly improved UX for visual data",
+        "4": "Designed a clean and intuitive admin panel tailored for non-technical users"
+      }
+    }
   }
 }
