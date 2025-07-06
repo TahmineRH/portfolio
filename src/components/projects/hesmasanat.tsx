@@ -7,8 +7,9 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useThemeStore } from "../../store/theme";
 import { Button } from "../ui/button";
-import { useTechIcons, type ToolName } from "./tech-icons";
+import HesamDemo from "./demos/hesam-demo";
 import SectionNav from "./section-nav";
+import { useTechIcons, type ToolName } from "./tech-icons";
 
 function Hesamsanat() {
   const { t } = useTranslation();
@@ -122,6 +123,7 @@ function Hesamsanat() {
               <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
                 {t("Projects.titles.demo")}
               </h2>
+              <HesamDemo />
             </div>
             <div id="lessons" className="flex flex-col gap-6">
               <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
