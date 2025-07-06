@@ -80,7 +80,7 @@ export default function ProjectCards() {
             layoutId={`card-${card.id}`}
             key={card.id}
             className={cn(
-              `rounded-[0.75rem] bg-card/90 h-full  flex items-center justify-center text-center overflow-hidden max-lg:col-span-7 col-span-${card.col}`
+              `rounded-[0.75rem]  h-full  flex items-center justify-center text-center overflow-hidden max-lg:col-span-7 col-span-${card.col}`
             )}
             onClick={() => setActiveCard(card)}
           >
@@ -95,7 +95,7 @@ export default function ProjectCards() {
                 src={card.picture}
                 draggable={false}
                 onContextMenu={(e) => e.preventDefault()}
-                className="w-full h-full max-lg:h-80 max-md:h-64 object-contain "
+                className="w-full h-full max-lg:h-80 max-md:h-64 object-contain bg-card/40 rounded-[0.75rem]"
                 alt={`project-${card.id}`}
               />
             </MovingBorderWrapper>
