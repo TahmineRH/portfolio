@@ -1,10 +1,11 @@
 import { ReactComponent as MotionLib } from "@/assets/icons/motion.svg";
 import { ReactComponent as NextIcon } from "@/assets/icons/nextjs.svg";
+import { ReactComponent as Reactjs } from "@/assets/icons/react.svg";
 import { ReactComponent as Shadcn } from "@/assets/icons/shadcn.svg";
 import { ReactComponent as Tailwind } from "@/assets/icons/tailwindcss.svg";
-import { ReactComponent as Threejs } from "@/assets/icons/threejs.svg";
 import { useMemo, type JSX } from "react";
 import JavaScript from "../../assets/icons/javaScript";
+import Threejs from "../../assets/icons/threejs";
 import TinyMCE from "../../assets/icons/tinymce";
 import TypeScript from "../../assets/icons/typescript";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
@@ -17,7 +18,9 @@ export type ToolName =
   | "JavaScript"
   | "CMS (TinyMCE)"
   | "Motion"
-  | "Three.js";
+  | "Three.js"
+  | "React.js"
+  | "Vanilla JS";
 
 export const useTechIcons = () => {
   const techIcons = useMemo<Record<ToolName, JSX.Element>>(
@@ -29,6 +32,16 @@ export const useTechIcons = () => {
           </TooltipTrigger>
           <TooltipContent>
             <p>Next.js</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      "React.js": (
+        <Tooltip>
+          <TooltipTrigger>
+            <Reactjs className="h-4 w-4 text-foreground rounded-full" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>React.js</p>
           </TooltipContent>
         </Tooltip>
       ),
@@ -69,6 +82,16 @@ export const useTechIcons = () => {
           </TooltipTrigger>
           <TooltipContent>
             <p>JavaScript</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      "Vanilla JS": (
+        <Tooltip>
+          <TooltipTrigger>
+            <JavaScript className="h-4 w-4 text-foreground rounded-xs" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Vanilla JS</p>
           </TooltipContent>
         </Tooltip>
       ),

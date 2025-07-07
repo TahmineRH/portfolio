@@ -31,12 +31,14 @@ export default function ProjectCards() {
   const cards = [
     {
       id: 1,
-      title: "Card One",
-      summary: "This is card one",
-      tools: [],
+      title: t("Projects.first.name"),
+      summary: t("Projects.first.summary"),
+      tools: t("Projects.first.tools")
+        .split(",")
+        .map((tool) => tool.trim() as ToolName),
       col: 4,
       picture: treeD,
-      more: "/projects",
+      more: "/projects/design-system",
     },
     {
       id: 2,
@@ -154,7 +156,8 @@ export default function ProjectCards() {
                   <div className="flex justify-between mt-6">
                     <Link to={activeCard.more}>
                       <Button className="flex items-center justify-center gap-2">
-                        {t("Projects.titles.view")} <ChevronRight className="rtl:rotate-180" />
+                        {t("Projects.titles.view")}{" "}
+                        <ChevronRight className="rtl:rotate-180" />
                       </Button>
                     </Link>
                     {activeCard.link && (
