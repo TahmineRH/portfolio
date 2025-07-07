@@ -81,6 +81,42 @@
       "view": "View Project",
       "live": "Open Live Site"
     },
+    "first": {
+      "name": "HesamSanat Design System",
+      "summary": "A web application to showcase and customize Hesam Sanat’s products in 3D with environment previews and component selection.",
+      "description": "“HesamSanat Design System” is an interactive and advanced web platform that allows users to explore, design, and customize urban lighting products from Hesam Sanat in full 3D. Users can mix and match different components such as lamp heads, poles, and bases, apply custom colors, and visualize their final product in realistic outdoor environments like parks, streets, and sidewalks. The project’s main goal was to enhance the visual presentation of products and provide a unique interactive experience for customers and architects.",
+      "tools": "Three.js, Vanilla JS, Tailwind, React.js",
+      "goals": {
+        "1": "Interactive 3D display of products",
+        "2": "Allow users to build and customize their own products",
+        "3": "Visualize products in real-world environments (park, street, sidewalk)",
+        "4": "Provide admin tools for product and user management"
+      },
+      "features": {
+        "1": "Design and customize lighting products by combining parts and colors",
+        "2": "View products in realistic 3D scenes with different lighting and positions",
+        "3": "Add products to favorites",
+        "4": "Submit orders for customized products",
+        "5": "Admin panel for managing products, orders, and users",
+        "6": "Fully responsive and multilingual website"
+      },
+      "chalenges": {
+        "chalenge1": "Large 3D model sizes and performance optimization",
+        "solution1": "Used Draco compression to reduce file sizes for faster loading and smooth performance.",
+        "chalenge2": "Precise placement of parts in 3D space",
+        "solution2": "Used dynamic calculation of bounding boxes and object heights in Three.js to stack parts correctly.",
+        "chalenge3": "Material-specific color changes",
+        "solution3": "Identified mesh parts using isMesh to apply color changes only to the correct materials.",
+        "chalenge4": "Rendering in multiple environments with realistic textures and lighting",
+        "solution4": "Adjusted camera position, lighting, and model placement differently for each environment (park, street, sidewalk) to ensure realistic previews."
+      },
+      "lessons": {
+        "1": "Advanced Three.js techniques and working with glTF/GLB models",
+        "2": "3D model optimization with Draco compression for better performance",
+        "3": "Scene lighting, camera control, and object positioning in Three.js",
+        "4": "Building user-friendly 3D configurators that allow intuitive product customization"
+      }
+    },
     "second": {
       "name": "Hesam Sanat Shargh",
       "summary": "A multilingual website for introducing and selling Hesam Sanat factory's products, including park and street lights and urban furniture — designed with SEO focus and dual themes.",
