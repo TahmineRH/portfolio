@@ -174,12 +174,16 @@
         "5": "Cross-platform availability: both web and mobile versions"
       },
       "chalenges": {
-        "chalenge1": "Optimizing front-end performance for mobile devices",
-        "solution1": "Used Expo and optimized UI rendering to ensure smooth performance.",
-        "chalenge2": "Managing multiple AI models and subscription-based access",
-        "solution2": "Built a modular system to switch between models and control feature access based on the user's plan.",
-        "chalenge3": "Handling file downloads and sharing AI-generated content",
-        "solution3": "Implemented native file management using expo-file-system and expo-sharing for seamless file downloads and sharing."
+        "chalenge1": "Real-time Streaming of AI Responses in React Native",
+        "solution1": "One of the key challenges was implementing real-time streaming of AI-generated responses word by word, allowing users to see responses progressively without waiting for the entire message. Since React Native with Expo doesn't natively support streaming, a custom solution was built using ReadableStream and getReader to read the data, TextDecoder to decode it, real-time UI updates, and smooth scrolling to the latest messages.",
+        "chalenge2": "Managing Multiple AI Models and Subscription Tiers",
+        "solution2": "Users needed access to different AI models (SiliconTech-AI, GPT-4o, GPT-4o-mini) based on their subscription plans. A modular system was designed to enable seamless switching between models while controlling feature access according to the user's subscription, without disrupting the user experience.",
+        "chalenge3": "File Download and Sharing in a Native Environment",
+        "solution3": "To handle AI-generated images and files, Expo's file-system and sharing modules were used for downloading, saving, and sharing content. Cross-platform compatibility and proper error handling were implemented to ensure a smooth and reliable experience.",
+        "chalenge4": "Detecting Right-to-Left (RTL) and Left-to-Right (LTR) Languages",
+        "solution4": "To correctly display messages in languages like Persian (RTL) or English (LTR), automatic language detection was implemented. Based on the detected direction, text alignment and writing direction were adjusted to maintain proper readability.",
+        "chalenge5": "Rendering AI Responses with Markdown Support",
+        "solution5": "To preserve rich text formatting in AI responses-including bold text, lists, and code snippets-the app used react-native-markdown-display with custom styling. Compatibility with both RTL and LTR languages was ensured for a polished presentation."
       },
       "lessons": {
         "1": "Working with various OpenAI models and integrating their APIs into mobile apps",

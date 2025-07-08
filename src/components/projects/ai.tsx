@@ -94,7 +94,7 @@ function AI() {
                 {t("Projects.titles.chalenges")}
               </h2>
               <ul className="flex flex-col gap-10">
-                {[...Array(3)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <div className="flex flex-col gap-2" key={i}>
                     <li className="text-light flex items-center gap-2">
                       <img
@@ -102,11 +102,11 @@ function AI() {
                         draggable={false}
                         onContextMenu={(e) => e.preventDefault()}
                         className="w-5 h-5 object-contain max-md:w-5 max-md:h-5"
-                        alt="CV"
+                        alt="Challeng"
                       />
                       {t(`Projects.fourth.chalenges.chalenge${i + 1}`)}
                     </li>
-                    <li className="text-light flex items-center gap-2">
+                    <li className="text-light flex items-baseline gap-2">
                       <img
                         src={theme === "light" ? Solution : SolutionDark}
                         draggable={false}
