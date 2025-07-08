@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useThemeStore } from "../../store/theme";
 import { Button } from "../ui/button";
-import HesamDemo from "./demos/hesam-demo";
+import DesignDemo from "./demos/design-demo";
 import SectionNav from "./section-nav";
 import { useTechIcons, type ToolName } from "./tech-icons";
 
@@ -123,7 +123,7 @@ function DesignSystem() {
               <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
                 {t("Projects.titles.demo")}
               </h2>
-              <HesamDemo />
+              <DesignDemo />
             </div>
             <div id="lessons" className="flex flex-col gap-6">
               <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
