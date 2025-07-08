@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import HesamDemo from "./demos/hesam-demo";
 import SectionNav from "./section-nav";
 import { useTechIcons, type ToolName } from "./tech-icons";
+import AIDemo from "./demos/ai-demo";
 
 function AI() {
   const { t } = useTranslation();
@@ -123,7 +124,7 @@ function AI() {
               <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
                 {t("Projects.titles.demo")}
               </h2>
-              <HesamDemo />
+              <AIDemo />
             </div>
             <div id="lessons" className="flex flex-col gap-6">
               <h2 className="text-xl font-bold ltr:border-l-4 rtl:border-r-4 p-2">
