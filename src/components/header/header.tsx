@@ -1,4 +1,4 @@
-import Logo from "@/assets/logo.svg";
+import Logo from "../../assets/icons/logo";
 import LangToggle from "../locale/local";
 import ToggleTheme from "../theme/theme";
 
@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <div className="max-md:hidden absolute px-12 top-0 right-0 flex justify-between w-full items-center z-10 bg-background/20 backdrop-blur-xl">
       <div>
-        <div className="w-16 h-16">
-          <img src={Logo} className="object-cover w-full" alt="logo" />
+        <div className="w-16 h-16 p-2">
+          <Logo className="w-full h-full rounded-md" />
         </div>
       </div>
       <div className="flex items-center gap-8">

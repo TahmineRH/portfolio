@@ -1,10 +1,10 @@
 import { useThemeStore } from "../../store/theme";
 
-type TypeScriptProps = {
+type props = {
   className?: string;
 };
 
-export default function TinyMCE({ className }: TypeScriptProps) {
+export default function TinyMCE({ className }: props) {
   const theme = useThemeStore((state) => state.theme);
   return (
     <svg

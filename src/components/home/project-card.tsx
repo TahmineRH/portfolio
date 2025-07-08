@@ -155,12 +155,6 @@ export default function ProjectCards() {
                     </div>
                   </div>
                   <div className="flex justify-between mt-6">
-                    <Link to={activeCard.more}>
-                      <Button className="flex items-center justify-center gap-2">
-                        {t("Projects.titles.view")}{" "}
-                        <ChevronRight className="rtl:rotate-180" />
-                      </Button>
-                    </Link>
                     {activeCard.link && (
                       <Link
                         to={activeCard.link}
@@ -176,6 +170,12 @@ export default function ProjectCards() {
                         </Button>
                       </Link>
                     )}
+                    <Link to={activeCard.more}>
+                      <Button className="flex items-center justify-center gap-2">
+                        {t("Projects.titles.view")}{" "}
+                        <ChevronRight className="rtl:rotate-180" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

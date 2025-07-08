@@ -1,10 +1,10 @@
 import { useThemeStore } from "../../store/theme";
 
-type TypeScriptProps = {
+type props = {
   className?: string;
 };
 
-export default function TypeScript({ className }: TypeScriptProps) {
+export default function TypeScript({ className }: props) {
   const theme = useThemeStore((state) => state.theme);
   return (
     <svg
