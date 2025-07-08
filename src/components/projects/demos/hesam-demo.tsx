@@ -7,65 +7,30 @@ import home from "@/assets/images/projects/hesam/home-min.gif";
 import products from "@/assets/images/projects/hesam/products-min.gif";
 import projects from "@/assets/images/projects/hesam/projects-min.gif";
 
+const images = [
+  { src: home, alt: "Home Page" },
+  { src: projects, alt: "Projects Page" },
+  { src: products, alt: "Products Page" },
+  { src: blogs, alt: "Blogs Page" },
+  { src: expo, alt: "Exhibitions Page" },
+  { src: contact, alt: "Contact Page" },
+  { src: catalog, alt: "Catalog Page" },
+  { src: about, alt: "About Page" },
+];
+
 export default function HesamDemo() {
   return (
     <div className="grid grid-cols-2 max-md:grid-cols-1 w-full gap-4">
-      <img
-        src={home}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="Home page"
-      />
-      <img
-        src={projects}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="projects"
-      />
-      <img
-        src={products}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="products page"
-      />
-      <img
-        src={blogs}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="blogs page"
-      />
-      <img
-        src={expo}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="expo page"
-      />
-      <img
-        src={contact}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="contact page"
-      />
-      <img
-        src={catalog}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="catalog page"
-      />
-      <img
-        src={about}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="catalog page"
-      />
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image.src}
+          alt={image.alt}
+          draggable={false}
+          onContextMenu={(e) => e.preventDefault()}
+          className="w-full object-contain rounded-sm"
+        />
+      ))}
     </div>
   );
 }

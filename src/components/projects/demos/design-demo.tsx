@@ -7,65 +7,30 @@ import park from "@/assets/images/projects/design-system/park-min.gif";
 import productSildwalk from "@/assets/images/projects/design-system/product-sildwalk-min.gif";
 import street from "@/assets/images/projects/design-system/street-min.gif";
 
+const images = [
+  { src: login, alt: "Login Page" },
+  { src: home, alt: "Home Page" },
+  { src: create, alt: "Create Product" },
+  { src: street, alt: "Street Scene" },
+  { src: park, alt: "Park Scene" },
+  { src: productSildwalk, alt: "Sidewalk Scene" },
+  { src: favorite, alt: "Favorites Page" },
+  { src: order, alt: "Order Page" },
+];
+
 export default function DesignDemo() {
   return (
     <div className="grid grid-cols-2 max-md:grid-cols-1 w-full gap-4">
-      <img
-        src={login}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="login page"
-      />
-      <img
-        src={home}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="Home page"
-      />
-      <img
-        src={create}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="create"
-      />
-      <img
-        src={street}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="street page"
-      />
-      <img
-        src={park}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="park page"
-      />
-      <img
-        src={productSildwalk}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="product sildwalk page"
-      />
-      <img
-        src={favorite}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="favorite page"
-      />
-      <img
-        src={order}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-full object-contain rounded-sm"
-        alt="order page"
-      />
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image.src}
+          alt={image.alt}
+          draggable={false}
+          onContextMenu={(e) => e.preventDefault()}
+          className="w-full object-contain rounded-sm"
+        />
+      ))}
     </div>
   );
 }
