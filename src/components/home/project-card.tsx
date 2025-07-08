@@ -38,6 +38,7 @@ export default function ProjectCards() {
         .map((tool) => tool.trim() as ToolName),
       col: 4,
       picture: treeD,
+      link: "https://app.hesamsanat.com",
       more: "/projects/design-system",
     },
     {
@@ -168,7 +169,7 @@ export default function ProjectCards() {
                       >
                         <Button
                           variant={"link"}
-                          className="group flex items-center justify-center gap-2"
+                          className="group flex items-center justify-center gap-2 text-background dark:text-primary"
                         >
                           <LinkIcon className="group-hover:text-secondary " />
                           {t("Projects.titles.live")}

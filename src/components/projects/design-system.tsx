@@ -30,7 +30,7 @@ function DesignSystem() {
       </div>
       <div className="w-full border-y border-foreground/20 py-1 flex justify-end">
         <Link
-          to="https://hesamsanat.com/en"
+          to="https://app.hesamsanat.com"
           target="_blank"
           rel="noopener noreferrer"
         >
