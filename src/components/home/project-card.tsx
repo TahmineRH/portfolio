@@ -54,7 +54,7 @@ export default function ProjectCards() {
       more: "/projects/hesamsanat",
     },
     {
-      id: 4,
+      id: 3,
       title: "Card Four",
       summary: "This is card four",
       tools: [],
@@ -63,13 +63,16 @@ export default function ProjectCards() {
       more: "/projects",
     },
     {
-      id: 3,
-      title: "Card Three",
-      summary: "This is card three",
-      tools: [],
+      id: 4,
+      title: t("Projects.fourth.name"),
+      summary: t("Projects.fourth.summary"),
+      tools: t("Projects.fourth.tools")
+        .split(",")
+        .map((tool) => tool.trim() as ToolName),
       col: 4,
       picture: ai,
-      more: "/projects",
+      link: "https://silicontechai.ir",
+      more: "/projects/ai",
     },
   ];
 

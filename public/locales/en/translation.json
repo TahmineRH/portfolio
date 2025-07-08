@@ -154,6 +154,39 @@
         "3": "Built interactive project maps using React Leaflet which significantly improved UX for visual data",
         "4": "Designed a clean and intuitive admin panel tailored for non-technical users"
       }
+    },
+    "fourth": {
+      "name": "Silicontech AI",
+      "summary": "SiliconAI is a cross-platform AI-powered application that enables users to generate text and images using advanced models like GPT-4o and SiliconTech AI.",
+      "description": "SiliconAI is an intelligent cross-platform application designed to provide users with powerful AI-driven text and image generation capabilities. Built with React Native for mobile and a web-based frontend, the app leverages advanced models such as GPT-4o, GPT-4o-mini, and SiliconTech AI to deliver creative content, answer questions, and generate high-quality images. Users can choose from different AI models and subscription plans based on their needs, making the experience flexible and accessible. The project’s goal was to create an easy-to-use, fast, and visually appealing AI assistant for both mobile and web platforms.",
+      "tools": "React Native, TypeScript, Tailwind , Expo",
+      "goals": {
+        "1": "Provide an AI assistant for text generation (similar to ChatGPT)",
+        "2": "Enable image generation from text prompts",
+        "3": "Offer different subscription plans with access to multiple AI models",
+        "4": "Deliver a smooth and user-friendly experience across mobile and web"
+      },
+      "features": {
+        "1": "Chat-based AI text generation with multiple models (Silicontech-AI, GPT-4o, etc.)",
+        "2": "AI-powered image generation from text",
+        "3": "Multiple subscription plans to unlock different models and features",
+        "4": "Clean, responsive, and intuitive UI/UX",
+        "5": "Cross-platform availability: both web and mobile versions"
+      },
+      "chalenges": {
+        "chalenge1": " Optimizing front-end performance for mobile devices",
+        "solution1": "Used Expo and optimized UI rendering to ensure smooth performance.",
+        "chalenge2": "Managing multiple AI models and subscription-based access",
+        "solution2": "Built a modular system to switch between models and control feature access based on the user's plan.",
+        "chalenge3": "Handling file downloads and sharing AI-generated content",
+        "solution3": "Implemented native file management using expo-file-system and expo-sharing for seamless file downloads and sharing."
+      },
+      "lessons": {
+        "1": "Working with various OpenAI models and integrating their APIs into mobile apps",
+        "2": "Building scalable and modular front-end architecture with React Native & Expo",
+        "3": "Enhancing UX for AI-powered applications on mobile",
+        "4": "Managing file storage, downloads, and sharing within native apps"
+      }
     }
   }
 }

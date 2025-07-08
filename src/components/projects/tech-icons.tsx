@@ -1,3 +1,4 @@
+import { ReactComponent as Expo } from "@/assets/icons/expo.svg";
 import { ReactComponent as MotionLib } from "@/assets/icons/motion.svg";
 import { ReactComponent as NextIcon } from "@/assets/icons/nextjs.svg";
 import { ReactComponent as Reactjs } from "@/assets/icons/react.svg";
@@ -20,6 +21,8 @@ export type ToolName =
   | "Motion"
   | "Three.js"
   | "React.js"
+  | "React Native"
+  | "Expo"
   | "Vanilla JS";
 
 export const useTechIcons = () => {
@@ -35,6 +38,16 @@ export const useTechIcons = () => {
           </TooltipContent>
         </Tooltip>
       ),
+      Expo: (
+        <Tooltip>
+          <TooltipTrigger>
+            <Expo className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Expo</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
       "React.js": (
         <Tooltip>
           <TooltipTrigger>
@@ -42,6 +55,16 @@ export const useTechIcons = () => {
           </TooltipTrigger>
           <TooltipContent>
             <p>React.js</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      "React Native": (
+        <Tooltip>
+          <TooltipTrigger>
+            <Reactjs className="h-4 w-4 text-foreground rounded-full" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>React Native</p>
           </TooltipContent>
         </Tooltip>
       ),
