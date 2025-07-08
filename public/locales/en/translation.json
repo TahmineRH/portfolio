@@ -174,7 +174,7 @@
         "5": "Cross-platform availability: both web and mobile versions"
       },
       "chalenges": {
-        "chalenge1": " Optimizing front-end performance for mobile devices",
+        "chalenge1": "Optimizing front-end performance for mobile devices",
         "solution1": "Used Expo and optimized UI rendering to ensure smooth performance.",
         "chalenge2": "Managing multiple AI models and subscription-based access",
         "solution2": "Built a modular system to switch between models and control feature access based on the user's plan.",
