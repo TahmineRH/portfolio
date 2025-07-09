@@ -7,10 +7,9 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useThemeStore } from "../../store/theme";
 import { Button } from "../ui/button";
-import HesamDemo from "./demos/hesam-demo";
+import AIDemo from "./demos/ai-demo";
 import SectionNav from "./section-nav";
 import { useTechIcons, type ToolName } from "./tech-icons";
-import AIDemo from "./demos/ai-demo";
 
 function AI() {
   const { t } = useTranslation();
