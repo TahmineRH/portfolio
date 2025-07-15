@@ -18,7 +18,7 @@ type Card = {
   summary: string;
   picture: string;
   link?: string;
-  more: string;
+  more?: string;
   tools: string[];
   col: number;
 };
@@ -55,12 +55,13 @@ export default function ProjectCards() {
     },
     {
       id: 3,
-      title: "Card Four",
-      summary: "This is card four",
-      tools: [],
+      title: t("Projects.third.name"),
+      summary: t("Projects.third.summary"),
+      tools: t("Projects.third.tools")
+        .split(",")
+        .map((tool) => tool.trim() as ToolName),
       col: 3,
       picture: travel,
-      more: "/projects",
     },
     {
       id: 4,
@@ -158,6 +159,14 @@ export default function ProjectCards() {
                     </div>
                   </div>
                   <div className="flex justify-between mt-6">
+                    {activeCard.more && (
+                      <Link to={activeCard.more}>
+                        <Button className="flex items-center justify-center gap-2">
+                          {t("Projects.titles.view")}{" "}
+                          <ChevronRight className="rtl:rotate-180" />
+                        </Button>
+                      </Link>
+                    )}
                     {activeCard.link && (
                       <Link
                         to={activeCard.link}
@@ -173,12 +182,6 @@ export default function ProjectCards() {
                         </Button>
                       </Link>
                     )}
-                    <Link to={activeCard.more}>
-                      <Button className="flex items-center justify-center gap-2">
-                        {t("Projects.titles.view")}{" "}
-                        <ChevronRight className="rtl:rotate-180" />
-                      </Button>
-                    </Link>
                   </div>
                 </div>
               </motion.div>

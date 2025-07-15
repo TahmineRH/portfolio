@@ -1,11 +1,13 @@
 import { ReactComponent as Expo } from "@/assets/icons/expo.svg";
 import { ReactComponent as MotionLib } from "@/assets/icons/motion.svg";
 import { ReactComponent as NextIcon } from "@/assets/icons/nextjs.svg";
+import { ReactComponent as Prisma } from "@/assets/icons/prisma.svg";
 import { ReactComponent as Reactjs } from "@/assets/icons/react.svg";
 import { ReactComponent as Shadcn } from "@/assets/icons/shadcn.svg";
 import { ReactComponent as Tailwind } from "@/assets/icons/tailwindcss.svg";
 import { useMemo, type JSX } from "react";
 import JavaScript from "../../assets/icons/javaScript";
+import Mongodb from "../../assets/icons/mongodb";
 import Threejs from "../../assets/icons/threejs";
 import TinyMCE from "../../assets/icons/tinymce";
 import TypeScript from "../../assets/icons/typescript";
@@ -23,6 +25,8 @@ export type ToolName =
   | "React.js"
   | "React Native"
   | "Expo"
+  | "MongoDB"
+  | "Prisma"
   | "Vanilla JS";
 
 export const useTechIcons = () => {
@@ -35,6 +39,16 @@ export const useTechIcons = () => {
           </TooltipTrigger>
           <TooltipContent>
             <p>Next.js</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      Prisma: (
+        <Tooltip>
+          <TooltipTrigger>
+            <Prisma className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Expo</p>
           </TooltipContent>
         </Tooltip>
       ),
@@ -135,6 +149,16 @@ export const useTechIcons = () => {
           </TooltipTrigger>
           <TooltipContent>
             <p>Motion</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      MongoDB: (
+        <Tooltip>
+          <TooltipTrigger>
+            <Mongodb className="h-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Mongo DB</p>
           </TooltipContent>
         </Tooltip>
       ),

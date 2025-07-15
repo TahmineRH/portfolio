@@ -155,6 +155,43 @@
         "4": "Designed a clean and intuitive admin panel tailored for non-technical users"
       }
     },
+    "third": {
+      "name": "Customize Your Perfect Tour",
+      "summary": "This project is a customizable travel tour platform allowing users to browse, filter, and personalize travel packages according to their preferences.",
+      "description": "This project is a modern, full-stack travel platform that allows users to discover a wide variety of travel tours and customize them based on destinations, dates, and preferences. Built using Next.js, MongoDB, Prisma, and modern UI libraries, this in-progress project offers both frontend and backend functionalities handled by me. It focuses on delivering a seamless, responsive experience for users and includes features like date pickers, internationalization, dynamic tour filtering, and admin panel capabilities.",
+      "tools": "Next.js, MongoDB, Prisma, Tailwind, TypeScript, Motion",
+      "goals": {
+        "1": "Build a fully customizable travel tour platform",
+        "2": "Allow users to filter and view tours based on location, time, and preferences",
+        "3": "Implement user authentication and dashboard features",
+        "4": "Enable admins to manage tour packages and user submissions",
+        "5": "Create an internationalized and responsive interface for global users"
+      },
+      "features": {
+        "1": "Advanced tour filtering and customization options",
+        "2": "Dynamic date selection and user-friendly booking UI",
+        "3": "Secure authentication and role-based dashboards",
+        "4": "Admin panel for managing tour packages",
+        "5": "Multilingual support and responsive design"
+      },
+      "chalenges": {
+        "chalenge1": "Building a flexible data model for customizable tours",
+        "solution1": "Used Prisma with a scalable MongoDB schema to handle dynamic tour configurations and options.",
+        "chalenge2": "Managing internationalization across routes and dynamic content",
+        "solution2": "Integrated next-intl to support multilingual routing and translations for both static and dynamic content.",
+        "chalenge3": "Handling file uploads for tour images and media",
+        "solution3": "Implemented AWS S3 for reliable image and media asset storage with secure access control.",
+        "chalenge4": "Creating a scalable admin panel for tour management",
+        "solution4": "Used Radix UI, React Query, and server-side features of Next.js to build a fast and interactive admin interface."
+      },
+      "lessons": {
+        "1": "Designing modular and scalable full-stack applications",
+        "2": "Working with Prisma and MongoDB for dynamic content",
+        "3": "Building responsive, accessible UI using Radix and Tailwind",
+        "4": "Managing image uploads and cloud storage with AWS S3",
+        "5": "Implementing multilingual support with next-intl"
+      }
+    },
     "fourth": {
       "name": "Silicontech AI",
       "summary": "SiliconAI is a cross-platform AI-powered application that enables users to generate text and images using advanced models like GPT-4o and SiliconTech AI.",

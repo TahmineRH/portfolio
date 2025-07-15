@@ -1,5 +1,5 @@
 import Pic from "@/assets/images/4044.png";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
@@ -21,7 +21,8 @@ function NotFound() {
         </p>
         <Link to="/" className="w-full flex justify-center">
           <Button className="flex items-center justify-center ">
-            {t("notFound.buttonText")} <ArrowRight className="rtl:rotate-180" />
+            {t("notFound.buttonText")}{" "}
+            <ChevronRight className="rtl:rotate-180" />
           </Button>
         </Link>
       </div>

@@ -65,9 +65,9 @@ function TooltipContent({
         )}
         {...props}
       >
-        {children}
+        <p className="z-40 py-1">{children}</p>
         {hidden && (
-          <TooltipPrimitive.Arrow className="bg-card fill-card z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
+          <TooltipPrimitive.Arrow className="bg-card fill-card z-10 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
         )}
       </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>
