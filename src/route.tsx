@@ -4,6 +4,7 @@ import DesignSystem from "./components/projects/design-system";
 import Hesamsanat from "./components/projects/hesmasanat";
 import About from "./pages/about";
 import Home from "./pages/home";
+import NotFound from "./pages/not-found";
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
       <Route path="/projects/design-system" element={<DesignSystem />} />
       <Route path="/projects/ai" element={<AI />} />
       <Route path="/contact" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
