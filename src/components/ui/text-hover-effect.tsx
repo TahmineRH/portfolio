@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 
-export const TextHoverEffect = ({ text }: { text: string }) => {
+export const TextEffect = ({ text }: { text: string }) => {
   const svgRef = useRef<SVGSVGElement>(null);
 
   return (

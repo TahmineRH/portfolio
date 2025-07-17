@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { BackgroundBeams } from "../ui/background-beams";
 import { Button } from "../ui/button";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
-import { TextHoverEffect } from "../ui/text-hover-effect";
+import { TextEffect } from "../ui/text-hover-effect";
 import { useTechIcons, type ToolName } from "./tech-icons";
 
 function ProjectsList() {
@@ -81,7 +81,7 @@ function ProjectsList() {
           <div className="max-md:hidden relative w-full h-72 md:w-1/3  pt-12  overflow-hidden border rounded-lg border-black/5 dark:border-white/5 ">
             {i === 3 && <BackgroundBeams />}
             <div className="absolute top-12 max-md:top-2 -z-10 w-full">
-              <TextHoverEffect text={project.name} />
+              <TextEffect text={project.name} />
             </div>
             <img
               src={project.picture}
@@ -98,7 +98,7 @@ function ProjectsList() {
             <div className="md:hidden relative w-full overflow-hidden ">
               {i === 3 && <BackgroundBeams />}
               <div className="absolute top-2 -left-1 -z-10 w-full">
-                <TextHoverEffect text={project.name} />
+                <TextEffect text={project.name} />
               </div>
               <img
                 src={project.picture}
