@@ -5,13 +5,14 @@ import Hesamsanat from "./components/projects/hesmasanat";
 import About from "./pages/about";
 import Home from "./pages/home";
 import NotFound from "./pages/not-found";
+import Projects from "./pages/projects";
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/projects" element={<Home />} />
+      <Route path="/projects" element={<Projects />} />
       <Route path="/projects/hesamsanat" element={<Hesamsanat />} />
       <Route path="/projects/design-system" element={<DesignSystem />} />
       <Route path="/projects/ai" element={<AI />} />
