@@ -70,6 +70,8 @@
     "footerNote": "Designed & developed with calm tea and curious code"
   },
   "Projects": {
+    "title": "Curated Projects",
+    "description": "Here are some of my recent projects that showcase my skills and interests.",
     "titles": {
       "description": "Short Explanation",
       "tools": "Tech Stack Used",

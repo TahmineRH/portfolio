@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import React, { useEffect, useState } from "react";
 import { cn } from "../../lib/utils";
-
+import { useThemeStore } from "../../store/theme";
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
@@ -22,6 +22,9 @@ export function HoverBorderGradient({
     clockwise?: boolean;
   } & React.HTMLAttributes<HTMLElement>
 >) {
+  const theme = useThemeStore((state) => state.theme);
+  const isDark = theme === "dark";
+
   const [hovered, setHovered] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
@@ -35,12 +38,18 @@ export function HoverBorderGradient({
   };
 
   const movingMap: Record<Direction, string> = {
-    TOP: "radial-gradient(20.7% 50% at 50% 0%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
-    LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
-    BOTTOM:
-      "radial-gradient(20.7% 50% at 50% 100%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
-    RIGHT:
-      "radial-gradient(16.2% 41.199999999999996% at 100% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
+    TOP: isDark
+      ? "radial-gradient(20.7% 50% at 50% 0%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
+      : "radial-gradient(20.7% 50% at 50% 0%, #d08700 0%, rgba(0,0,0,0) 100%)",
+    LEFT: isDark
+      ? "radial-gradient(16.6% 43.1% at 0% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
+      :  "radial-gradient(16.6% 43.1% at 0% 50%, #d08700 0%, rgba(0,0,0,0) 100%)",
+    BOTTOM: isDark
+      ? "radial-gradient(20.7% 50% at 50% 100%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
+      : "radial-gradient(20.7% 50% at 50% 100%, #d08700 0%, rgba(0,0,0,0) 100%)",
+    RIGHT: isDark
+      ? "radial-gradient(16.2% 41.199999999999996% at 100% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
+      : "radial-gradient(16.2% 41.2% at 100% 50%, #d08700 0%, rgba(0,0,0,0) 100%)",
   };
 
   const highlight =
@@ -53,7 +62,7 @@ export function HoverBorderGradient({
       }, duration * 1000);
       return () => clearInterval(interval);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hovered]);
   return (
     <Tag
