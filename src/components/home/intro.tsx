@@ -3,6 +3,7 @@ import Drag from "../drag";
 import { Button } from "../ui/button";
 import { SocialMedia } from "./social-media";
 import { Link } from "react-router-dom";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 function Intro() {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ function Intro() {
           {t("name")}
         </h1>
         <h1 className="max-md:py-4 text-lg max-md:text-base leading-8 max-md:leading-6  w-200 md:font-light max-md:text-foreground/80 max-md:w-full">
-          {t("intro")}
+          <TextGenerateEffect words={t("intro")} />
         </h1>
         <div className="flex gap-4">
           <Button className="w-36 duration-500 hover:text-background bg-foreground/5 text-foreground ">
