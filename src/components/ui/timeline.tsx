@@ -20,7 +20,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 80%"],
+    offset: ["start 10%", "end 50%"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -35,8 +35,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               key={index}
               className="hidden max-md:flex sticky flex-col md:flex-row z-40 items-center top-40 self-start w-full"
             >
-              <div className=" h-10 absolute rtl:max-md:right-3.5 ltr:left-3.5 w-10 rounded-full bg-primary/10 flex items-center justify-center z-10">
-                <div className="h-4 w-4 rounded-full bg-primary border border-secondary dark:border-neutral-700 p-2 " />
+              <div className="h-10 absolute rtl:max-md:right-3.5 ltr:left-3.5 w-10 rounded-full bg-primary/10 flex items-center justify-center z-10">
+                <div className="h-4 w-4 rounded-full bg-primary border border-secondary dark:border-neutral-700 p-2" />
               </div>
             </div>
             <div
