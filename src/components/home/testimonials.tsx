@@ -1,6 +1,6 @@
-import { useTranslation } from "react-i18next";
 import quote from "@/assets/icons/quote.svg";
 import { Dot } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function Testimonials() {
   const { t } = useTranslation();

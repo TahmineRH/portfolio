@@ -1,6 +1,10 @@
-import { useMotionValue, MotionValue } from "motion/react";
-import { useState, useEffect } from "react";
-import { useMotionTemplate, motion } from "motion/react";
+import {
+  motion,
+  MotionValue,
+  useMotionTemplate,
+  useMotionValue,
+} from "motion/react";
+import { useEffect, useState } from "react";
 import { cn } from "../../lib/utils";
 
 export const EvervaultCard = ({
@@ -96,8 +100,7 @@ export function CardPattern({
   );
 }
 
-const characters =
-  "0010111010011001111111010000010101001100101";
+const characters = "0010111010011001111111010000010101001100101";
 export const generateRandomString = (length: number) => {
   let result = "";
   for (let i = 0; i < length; i++) {

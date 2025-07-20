@@ -20,6 +20,7 @@ import {
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import ScrollStartTop from "../ui/scroll-start-top";
 import SlideTabs from "./slide-tabs";
 
 export default function Navbar() {
@@ -70,6 +71,7 @@ export default function Navbar() {
 
   return (
     <nav>
+      <ScrollStartTop />
       {/* Desktop */}
       <div
         className={cn(
