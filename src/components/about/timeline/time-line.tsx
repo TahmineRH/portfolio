@@ -1,11 +1,11 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import childhood from "@/assets/me/newww.png";
+import programmer from "@/assets/me/programmer.png";
 import teen from "@/assets/me/teen2.png";
 import young from "@/assets/me/young.png";
-import programmer from "@/assets/me/programmer.png";
-import Title from "./title";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Title from "./title";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 100 },
