@@ -24,16 +24,16 @@ export const TextEffect = ({ text }: { text: string }) => {
           <stop offset="100%" stopColor="#8b5cf6" />
         </linearGradient>
       </defs> */}
-      <text
+      {/* <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
+        className="fill-transparent stroke-neutral-200 font-[helvetica] text-9xl font-bold dark:stroke-neutral-800"
       >
         {text}
-      </text>
+      </text> */}
       <motion.text
         x="50%"
         y="50%"

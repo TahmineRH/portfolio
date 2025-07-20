@@ -16,12 +16,22 @@ export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
     if (localTheme) {
       setTheme(localTheme, false);
     } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: light)"
-      ).matches;
-      setTheme(prefersDark ? "dark" : "light", false);
+      setTheme("dark", false); // 👈 اینجا دیفالت dark
     }
   }, [setTheme]);
+
+  // useEffect(() => {
+  //   const localTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+
+  //   if (localTheme) {
+  //     setTheme(localTheme, false);
+  //   } else {
+  //     const prefersDark = window.matchMedia(
+  //       "(prefers-color-scheme: dark)"
+  //     ).matches;
+  //     setTheme(prefersDark ? "dark" : "light", false);
+  //   }
+  // }, [setTheme]);
 
   if (variant === "switch") {
     return (

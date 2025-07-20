@@ -34,11 +34,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-start pb-20 md:gap-10 ltr:max-md:pl-16 rtl:max-md:pr-16 max-md:px-6"
           >
-            <div className="h-10 absolute rtl:right-3 ltr:left-3 w-10 rounded-full bg-primary/20 flex items-center justify-center z-10">
-              <div className="h-4 w-4 rounded-full bg-primary  border border-secondary dark:border-neutral-700 p-2 " />
+            <div className="h-10 absolute rtl:right-3 ltr:left-3 w-10 rounded-full bg-primary/10 flex items-center justify-center z-10">
+              <div className="h-4 w-4 rounded-full bg-primary border border-secondary dark:border-neutral-700 p-2 " />
             </div>
 
-            <h3 className="hidden md:block text-xl rtl:md:pr-20 ltr:md:pl-20 md:text-5xl font-bold text-card max-md:mt-4">
+            <h3 className="hidden md:block min-w-96 text-xl rtl:md:pr-20 ltr:md:pl-20 md:text-5xl font-bold text-card max-md:mt-4">
               {item.title}
             </h3>
 
@@ -46,7 +46,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-4xl mb-4 text-start font-bold text-card">
                 {item.title}
               </h3>
-              <p>{item.content}</p>
+              <p className="md:mt-2">{item.content}</p>
             </div>
           </div>
         ))}
