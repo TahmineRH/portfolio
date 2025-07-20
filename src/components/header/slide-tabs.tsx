@@ -23,7 +23,7 @@ export default function SlideTabs({
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex w-fit p-1"
+      className="relative mx-auto flex w-fit p-0.5"
     >
       {navLinks.map((link) => (
         <Link
@@ -80,7 +80,7 @@ const Cursor = ({ position }: { position: Position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-7 rounded-lg bg-background md:h-12"
+      className="absolute z-0 h-7 rounded-md bg-background md:h-12"
     />
   );
 };
