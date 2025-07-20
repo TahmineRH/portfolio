@@ -10,11 +10,11 @@ function TimelineJourney() {
 
   const data = [
     {
-      title: t("childhood.title"),
+      title: t("about.childhood.title"),
       content: (
         <div>
           <p className="mb-8 text-sm text-foreground/80">
-            {t("childhood.paragraph")}
+            {t("about.childhood.paragraph")}
           </p>
           <div className="w-full">
             <img
@@ -27,11 +27,11 @@ function TimelineJourney() {
       ),
     },
     {
-      title: t("adolescence.title"),
+      title: t("about.adolescence.title"),
       content: (
         <div>
           <p className="mb-8 text-sm text-foreground/80">
-            {t("adolescence.paragraph")}
+            {t("about.adolescence.paragraph")}
           </p>
           <div className="w-full">
             <img
@@ -44,11 +44,11 @@ function TimelineJourney() {
       ),
     },
     {
-      title: t("university.title"),
+      title: t("about.university.title"),
       content: (
         <div>
           <p className="mb-8 text-sm text-foreground/80">
-            {t("university.paragraph")}
+            {t("about.university.paragraph")}
           </p>
           <div className="w-full">
             <img
@@ -61,11 +61,11 @@ function TimelineJourney() {
       ),
     },
     {
-      title: t("now.title"),
+      title: t("about.now.title"),
       content: (
         <div>
           <p className="mb-8 text-sm text-foreground/80">
-            {t("now.paragraph")}
+            {t("about.now.paragraph")}
           </p>
           <div className="w-full">
             <img

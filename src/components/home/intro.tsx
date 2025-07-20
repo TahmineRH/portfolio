@@ -26,7 +26,7 @@ function Intro() {
               className="w-36 duration-500 hover:text-white bg-secondary/50 text-foreground"
               variant={"secondary"}
             >
-              {t("about")}
+              {t("aboutButton")}
             </Button>
           </Link>
         </div>

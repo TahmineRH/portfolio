@@ -4,6 +4,7 @@ import { Spotlight } from "../components/ui/spotlight";
 
 function Projects() {
   const { t } = useTranslation();
+
   return (
     <main className="space-y-14 lg:space-y-32 px-4 mx-auto ">
       <div className="relative flex h-96 w-full overflow-hidden md:items-center md:justify-center">
