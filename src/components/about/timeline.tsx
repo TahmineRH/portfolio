@@ -3,7 +3,7 @@ import programmer from "@/assets/me/programmer.png";
 import adolescence from "@/assets/me/teen2.png";
 import young from "@/assets/me/young.png";
 import { useTranslation } from "react-i18next";
-import { Timeline } from "../../ui/timeline";
+import { Timeline } from "../ui/timeline";
 
 function TimelineJourney() {
   const { t } = useTranslation();

@@ -1,5 +1,4 @@
-import { p } from "motion/react-client";
-import TimelineJourney from "../components/about/timeline/timeline";
+import TimelineJourney from "../components/about/timeline";
 
 function About() {
   return (
@@ -10,4 +9,3 @@ function About() {
 }
 
 export default About;
-p

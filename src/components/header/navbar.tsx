@@ -20,6 +20,7 @@ import {
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import SlideTabs from "./slide-tabs";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -72,11 +73,12 @@ export default function Navbar() {
       {/* Desktop */}
       <div
         className={cn(
-          "fixed hidden md:block m-4 left-1/2 top-0 -translate-x-1/2 w-96 z-30 transition-transform duration-1000 rounded-lg bg-foreground/5 backdrop-blur-md",
+          "fixed hidden md:block m-4 left-1/2 top-0 -translate-x-1/2 w-fit z-30 transition-transform duration-1000 rounded-lg bg-foreground/5 backdrop-blur-md",
           show ? "translate-y-0" : "-translate-y-32"
         )}
       >
-        <div className="px-4 py-3 flex justify-between items-center">
+        <SlideTabs navLinks={navLinks} />
+        {/* <div className="px-4 py-3 flex justify-between items-center">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -89,7 +91,7 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile */}

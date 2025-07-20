@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Drag from "../drag";
 import { Button } from "../ui/button";
-import { SocialMedia } from "./social-media";
-import { Link } from "react-router-dom";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { SocialMedia } from "./social-media";
 
 function Intro() {
   const { t } = useTranslation();
