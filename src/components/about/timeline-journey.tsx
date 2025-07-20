@@ -16,11 +16,11 @@ function TimelineJourney() {
           <p className="mb-8 text-sm text-foreground/80">
             {t("about.childhood.paragraph")}
           </p>
-          <div className="w-full">
+          <div className="w-full bg-card rounded-lg">
             <img
               src={childhood}
               alt="childhood"
-              className="h-96 w-full rounded-lg object-contain"
+              className="max-h-96 w-full rounded-lg object-contain"
             />
           </div>
         </div>
@@ -33,11 +33,11 @@ function TimelineJourney() {
           <p className="mb-8 text-sm text-foreground/80">
             {t("about.adolescence.paragraph")}
           </p>
-          <div className="w-full">
+          <div className="w-full bg-card rounded-lg">
             <img
               src={adolescence}
               alt="adolescence"
-              className="h-96 w-full rounded-lg object-contain"
+              className="max-h-96 w-full rounded-lg object-contain"
             />
           </div>
         </div>
@@ -50,11 +50,11 @@ function TimelineJourney() {
           <p className="mb-8 text-sm text-foreground/80">
             {t("about.university.paragraph")}
           </p>
-          <div className="w-full">
+          <div className="w-full bg-card rounded-lg">
             <img
               src={young}
               alt="young"
-              className="h-96 w-full rounded-lg object-contain"
+              className="w-full rounded-lg object-contain"
             />
           </div>
         </div>
@@ -67,11 +67,11 @@ function TimelineJourney() {
           <p className="mb-8 text-sm text-foreground/80">
             {t("about.now.paragraph")}
           </p>
-          <div className="w-full">
+          <div className="w-full bg-card rounded-lg">
             <img
               src={programmer}
               alt="programmer"
-              className="h-96 w-full rounded-lg object-contain"
+              className="w-full rounded-lg object-contain"
             />
           </div>
         </div>
