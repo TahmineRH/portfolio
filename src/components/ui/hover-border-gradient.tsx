@@ -43,7 +43,7 @@ export function HoverBorderGradient({
       : "radial-gradient(20.7% 50% at 50% 0%, #d08700 0%, rgba(0,0,0,0) 100%)",
     LEFT: isDark
       ? "radial-gradient(16.6% 43.1% at 0% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
-      :  "radial-gradient(16.6% 43.1% at 0% 50%, #d08700 0%, rgba(0,0,0,0) 100%)",
+      : "radial-gradient(16.6% 43.1% at 0% 50%, #d08700 0%, rgba(0,0,0,0) 100%)",
     BOTTOM: isDark
       ? "radial-gradient(20.7% 50% at 50% 100%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)"
       : "radial-gradient(20.7% 50% at 50% 100%, #d08700 0%, rgba(0,0,0,0) 100%)",
@@ -64,6 +64,7 @@ export function HoverBorderGradient({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hovered]);
+
   return (
     <Tag
       onMouseEnter={() => {
@@ -71,7 +72,7 @@ export function HoverBorderGradient({
       }}
       onMouseLeave={() => setHovered(false)}
       className={cn(
-        "relative flex rounded-lg  content-center bg-black/5 hover:bg-black/10 transition duration-500 dark:bg-white/5 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
+        "relative flex rounded-lg content-center bg-black/5 hover:bg-black/10 transition duration-500 dark:bg-white/5 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
         containerClassName
       )}
       {...props}
