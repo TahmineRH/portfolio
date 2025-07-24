@@ -69,10 +69,6 @@
       "testimonial": "Tahmine is one of the most impressive colleagues I’ve ever worked with. She brings passion to every project, embraces challenges, and is always eager to explore new frameworks and technologies. Whenever a difficult or overlooked project came up—ones others often avoided—Tahmine was the first to step in, driven by a desire to learn and grow. She is truly intrinsically motivated by her goals and values, and she stays focused regardless of external pressures or distractions. From a technical perspective, Tahmine consistently writes clean, well-structured code. Her teammates were always glad to see her name on a project, knowing they’d be working with code that’s easy to understand and build upon."
     }
   },
-  "footer": {
-    "slogan": "May your code be bug-free and your coffee always warm ☕",
-    "footerNote": "Designed & developed with calm tea and curious code"
-  },
   "Projects": {
     "title": "Curated Projects",
     "description": "Here are some of my recent projects that showcase my skills and interests.",
@@ -241,7 +237,7 @@
       "name": "Liquid Glass UI library for React ",
       "summary": "A customizable React component library that adds animated frosted glass effects to your UI.",
       "description": "Liquid Glass is a modern UI component library that brings a sleek, frosted-glass effect to your React applications — with zero CSS setup. Featuring animated shine, smooth blur, and full responsiveness, it allows developers to quickly wrap any content in a stylish, glassmorphic container. Whether you're building dashboards, cards, or landing pages, this library makes it easy to add an elegant, high-end look with minimal effort. Lightweight, customizable, and compatible with React 18 and 19, it's perfect for projects that need a clean, modern aesthetic.",
-      "tools": "React, TypeScript, Rollup, PostCSS",
+      "tools": "TypeScript, React.js, Rollup",
       "goals": {
         "1": "Build a reusable UI component with a liquid glass effect",
         "2": "Make the component customizable, responsive, and developer-friendly",
@@ -273,6 +269,27 @@
         "action": "For a better experience, try dragging the card to see the interactive liquid glass effect in action."
       }
     }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": " I'd love to hear from you! Whether you have a question, a project idea, or just want to say hi.",
+    "form": {
+      "title": "Contact Me",
+      "description": "Send me a message — I’ll get back to you soon!",
+      "name": { "title": "Your Name", "placeholder": "John Doe" },
+      "email": { "title": "Your Email", "placeholder": "you@example.com" },
+      "message": {
+        "title": "Your Message",
+        "placeholder": "Write your message..."
+      },
+      "submit": "Send Message",
+      "succes": "Message sent successfully.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "slogan": "May your code be bug-free and your coffee always warm ☕",
+    "footerNote": "Designed & developed with calm tea and curious code"
   },
   "notFound": {
     "title": "Page Not Found",

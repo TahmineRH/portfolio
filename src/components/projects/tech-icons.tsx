@@ -3,6 +3,7 @@ import { ReactComponent as MotionLib } from "@/assets/icons/motion.svg";
 import { ReactComponent as NextIcon } from "@/assets/icons/nextjs.svg";
 import { ReactComponent as Prisma } from "@/assets/icons/prisma.svg";
 import { ReactComponent as Reactjs } from "@/assets/icons/react.svg";
+import { ReactComponent as Rollup } from "@/assets/icons/rollup.svg";
 import { ReactComponent as Shadcn } from "@/assets/icons/shadcn.svg";
 import { ReactComponent as Tailwind } from "@/assets/icons/tailwindcss.svg";
 import { useMemo, type JSX } from "react";
@@ -27,6 +28,7 @@ export type ToolName =
   | "Expo"
   | "MongoDB"
   | "Prisma"
+  | "Rollup"
   | "Vanilla JS";
 
 export const useTechIcons = () => {
@@ -49,6 +51,16 @@ export const useTechIcons = () => {
           </TooltipTrigger>
           <TooltipContent>
             <p>Expo</p>
+          </TooltipContent>
+        </Tooltip>
+      ),
+      Rollup: (
+        <Tooltip>
+          <TooltipTrigger>
+            <Rollup className="h-4 w-4 text-foreground" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Rollup</p>
           </TooltipContent>
         </Tooltip>
       ),

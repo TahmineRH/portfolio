@@ -7,6 +7,7 @@ import About from "./pages/about";
 import Home from "./pages/home";
 import NotFound from "./pages/not-found";
 import Projects from "./pages/projects";
+import ContactMe from "./pages/contact";
 
 function AppRoutes() {
   return (
@@ -18,7 +19,7 @@ function AppRoutes() {
       <Route path="/projects/design-system" element={<DesignSystem />} />
       <Route path="/projects/ai" element={<AI />} />
       <Route path="/projects/liquid-glass" element={<LiquidGlass />} />
-      <Route path="/contact" element={<Home />} />
+      <Route path="/contact" element={<ContactMe />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

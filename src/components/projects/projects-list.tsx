@@ -94,8 +94,8 @@ function ProjectsList() {
             i % 2 === 0 ? "md:flex-row-reverse" : ""
           }`}
         >
-          <div className="max-md:hidden relative w-full h-72 md:w-1/3  pt-12  overflow-hidden border rounded-lg border-black/5 dark:border-white/5 ">
-            {i === 3 && <BackgroundBeams />}
+          <div className="max-md:hidden relative w-full h-72 md:w-1/3 pt-12 overflow-hidden border rounded-lg border-black/5 dark:border-white/5 ">
+            {i === 4 && <BackgroundBeams />}
             <div className="absolute top-12 max-md:top-2 -z-10 w-full">
               <TextEffect text={project.name} />
             </div>
@@ -152,7 +152,7 @@ function ProjectsList() {
             className="w-full bg-background text-foreground flex max-md:flex-col items-center md:px-8 max-md:p-0 md:h-72"
           >
             <div className="md:hidden relative w-full overflow-hidden ">
-              {i === 3 && <BackgroundBeams />}
+              {i === 4 && <BackgroundBeams />}
               <div className="absolute top-2 -left-1 -z-10 w-full">
                 <TextEffect text={project.name} />
               </div>
