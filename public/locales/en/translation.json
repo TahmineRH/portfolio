@@ -84,8 +84,10 @@
       "chalenges": "Challenges & Solutions",
       "lessons": "Lessons Learned",
       "demo": "Demo & Screenshots",
+      "demo2": "Live Demo",
       "view": "View Project",
-      "live": "Open Live Site"
+      "live": "Open Live Site",
+      "repository": "Repository"
     },
     "first": {
       "name": "HesamSanat Design System",
@@ -233,6 +235,42 @@
         "2": "Building scalable and modular front-end architecture with React Native & Expo",
         "3": "Enhancing UX for AI-powered applications on mobile",
         "4": "Managing file storage, downloads, and sharing within native apps"
+      }
+    },
+    "fifth": {
+      "name": "Liquid Glass UI library for React ",
+      "summary": "A customizable React component library that adds animated frosted glass effects to your UI.",
+      "description": "Liquid Glass is a modern UI component library that brings a sleek, frosted-glass effect to your React applications — with zero CSS setup. Featuring animated shine, smooth blur, and full responsiveness, it allows developers to quickly wrap any content in a stylish, glassmorphic container. Whether you're building dashboards, cards, or landing pages, this library makes it easy to add an elegant, high-end look with minimal effort. Lightweight, customizable, and compatible with React 18 and 19, it's perfect for projects that need a clean, modern aesthetic.",
+      "tools": "React, TypeScript, Rollup, PostCSS",
+      "goals": {
+        "1": "Build a reusable UI component with a liquid glass effect",
+        "2": "Make the component customizable, responsive, and developer-friendly",
+        "3": "Publish it as a package for use in any React project"
+      },
+      "features": {
+        "1": "A blurred, shimmering glass effect inspired by Apple’s iOS 26 — now available for React components, with zero CSS.",
+        "2": "Lightweight and responsive",
+        "3": "Supports content injection inside the glass container",
+        "4": "Compatible with React 18+ and 19+"
+      },
+      "chalenges": {
+        "chalenge1": "Dynamic blur rendering without CSS dependencies",
+        "solution1": "Solved by using encapsulated style logic inside the component.",
+        "chalenge2": "Ensuring cross-browser smooth animation",
+        "solution2": "weaked shine layers using filter, backdrop-filter, and transform.",
+        "chalenge3": "Packaging for NPM consumption with zero external dependencies",
+        "solution3": "Used Rollup with ESM and CJS bundling, and peerDependencies for React/ReactDOM.",
+        "chalenge4": "Usability in Tailwind and non-Tailwind projects",
+        "solution4": "Allowed inline styling and class-based customization to support all use cases."
+      },
+      "lessons": {
+        "1": "Best practices for building publishable component libraries",
+        "2": "Optimizing visual effects using native CSS properties like backdrop-filter"
+      },
+      "installation": {
+        "title": "Install the Library",
+        "description": "To use the library in your project, simply install it using the following command:",
+        "action": "For a better experience, try dragging the card to see the interactive liquid glass effect in action."
       }
     }
   },

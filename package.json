@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "i18next": "^25.2.1",
     "i18next-http-backend": "^3.0.2",
+    "liquid-glass-reactjs": "^0.0.0",
     "lucide-react": "^0.511.0",
     "motion": "^12.19.1",
     "react": "^19.1.0",

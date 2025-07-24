@@ -2,7 +2,9 @@ import AI from "@/assets/images/projects/ai/main.png";
 import design from "@/assets/images/projects/design-system/main.png";
 import hesamsanat from "@/assets/images/projects/hesam/main.png";
 import travel from "@/assets/images/projects/travel-main.png";
-import { ChevronRight, LinkIcon } from "lucide-react";
+import { GlassDiv } from "liquid-glass-reactjs";
+import { ChevronRight, Github, LinkIcon, Sparkles } from "lucide-react";
+import * as motion from "motion/react-client";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { BackgroundBeams } from "../ui/background-beams";
@@ -17,6 +19,20 @@ function ProjectsList() {
   const techIcons = useTechIcons();
 
   const cards = [
+    {
+      id: 0,
+      name: "LIQUI",
+      title: t("Projects.fifth.name"),
+      summary: t("Projects.fifth.summary"),
+      tools: t("Projects.fifth.tools")
+        .split(",")
+        .map((tool) => tool.trim() as ToolName),
+      col: 4,
+      picture: design,
+      link: "https://www.npmjs.com/package/liquid-glass-reactjs",
+      repo: "https://github.com/TahmineRH/Liquid-Glass",
+      more: "/projects/liquid-glass",
+    },
     {
       id: 1,
       name: "DESIG",
@@ -83,11 +99,51 @@ function ProjectsList() {
             <div className="absolute top-12 max-md:top-2 -z-10 w-full">
               <TextEffect text={project.name} />
             </div>
-            <img
-              src={project.picture}
-              alt={project.title}
-              className="rounded-lg object-cover w-full h-full z-10"
-            />
+            {i === 0 ? (
+              <div className="flex justify-center">
+                <BackgroundBeams />
+                <div className="w-full h-full absolute top-0 left-0">
+                  <div>
+                    <div className="rounded-full h-20 w-20 bg-secondary/50 absolute top-20 left-20"></div>
+                    <div className="rounded-full h-10 w-10 bg-primary/50 absolute top-35 left-60"></div>
+                    <div className="rounded-full h-10 w-10 bg-foreground/50 absolute top-50 left-30"></div>
+                  </div>
+                </div>
+                <motion.div
+                  drag
+                  dragDirectionLock
+                  dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+                  dragTransition={{
+                    bounceStiffness: 1000,
+                    bounceDamping: 15,
+                  }}
+                  dragElastic={0.4}
+                  whileDrag={{ cursor: "grabbing" }}
+                  style={{
+                    width: 320,
+                    height: 208,
+                    position: "absolute",
+                  }}
+                >
+                  <div
+                    className={`w-80 h-52 p-4 flex items-center justify-center transition-all duration-500`}
+                  >
+                    <GlassDiv className="rounded-xl p-8 h-full shadow-2xl w-full flex justify-center">
+                      <div className="flex items-center justify-center gap-2 h-full w-full">
+                        <h3 className="text-xl font-medium">Liquid Glass UI</h3>
+                        <Sparkles className="w-5 h-5 text-foreground" />
+                      </div>
+                    </GlassDiv>
+                  </div>
+                </motion.div>
+              </div>
+            ) : (
+              <img
+                src={project.picture}
+                alt={project.title}
+                className="rounded-lg object-cover w-full h-full z-10"
+              />
+            )}
           </div>
           <HoverBorderGradient
             key={project.id}
@@ -100,11 +156,53 @@ function ProjectsList() {
               <div className="absolute top-2 -left-1 -z-10 w-full">
                 <TextEffect text={project.name} />
               </div>
-              <img
-                src={project.picture}
-                alt={project.title}
-                className="rounded-lg object-cover w-full h-72 z-10 p-4"
-              />
+              {i === 0 ? (
+                <div className="flex w-full h-72 justify-center p-4">
+                  <BackgroundBeams />
+                  <div className="w-full h-full absolute top-0 left-0">
+                    <div>
+                      <div className="rounded-full h-20 w-20 bg-secondary/50 absolute top-10 left-30"></div>
+                      <div className="rounded-full h-10 w-10 bg-primary/50 absolute top-15 left-70"></div>
+                      <div className="rounded-full h-10 w-10 bg-foreground/50 absolute top-40 left-40"></div>
+                    </div>
+                  </div>
+                  <motion.div
+                    drag
+                    dragDirectionLock
+                    dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+                    dragTransition={{
+                      bounceStiffness: 1000,
+                      bounceDamping: 15,
+                    }}
+                    dragElastic={0.4}
+                    whileDrag={{ cursor: "grabbing" }}
+                    style={{
+                      width: 320,
+                      height: 208,
+                      position: "absolute",
+                    }}
+                  >
+                    <div
+                      className={`w-80 h-52 p-4 flex items-center justify-center transition-all duration-500`}
+                    >
+                      <GlassDiv className="rounded-xl p-8 h-full shadow-2xl w-full flex justify-center">
+                        <div className="flex items-center justify-center gap-2 h-full w-full">
+                          <h3 className="text-xl font-medium">
+                            Liquid Glass UI
+                          </h3>
+                          <Sparkles className="w-5 h-5 text-foreground" />
+                        </div>
+                      </GlassDiv>
+                    </div>
+                  </motion.div>
+                </div>
+              ) : (
+                <img
+                  src={project.picture}
+                  alt={project.title}
+                  className="rounded-lg object-cover w-full h-72 z-10 p-4"
+                />
+              )}
             </div>
             <div className="w-full flex flex-col justify-center max-md:p-4 ">
               <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
@@ -120,7 +218,7 @@ function ProjectsList() {
                 </div>
               </div>
 
-              <div className="md:mt-4 flex justify-between">
+              <div className="md:mt-4 flex justify-between flex-wrap max-md:gap-4">
                 {project.more && (
                   <Link to={project.more}>
                     <Button className="flex items-center justify-center gap-2">
@@ -129,21 +227,38 @@ function ProjectsList() {
                     </Button>
                   </Link>
                 )}
-                {project.link && (
-                  <Link
-                    to={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button
-                      variant={"link"}
-                      className="group flex items-center justify-center gap-2 text-primary"
+                <div className="flex gap-2">
+                  {project.repo && (
+                    <Link
+                      to={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <LinkIcon className="group-hover:text-secondary " />
-                      {t("Projects.titles.live")}
-                    </Button>
-                  </Link>
-                )}
+                      <Button
+                        variant={"link"}
+                        className="group flex items-center justify-center gap-2 text-primary"
+                      >
+                        <Github className="group-hover:text-secondary " />
+                        {t("Projects.titles.repository")}
+                      </Button>
+                    </Link>
+                  )}
+                  {project.link && (
+                    <Link
+                      to={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant={"link"}
+                        className="group flex items-center justify-center gap-2 text-primary"
+                      >
+                        <LinkIcon className="group-hover:text-secondary " />
+                        {t("Projects.titles.live")}
+                      </Button>
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </HoverBorderGradient>
