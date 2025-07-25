@@ -100,7 +100,7 @@ function ProjectsList() {
               <TextEffect text={project.name} />
             </div>
             {i === 0 ? (
-              <div className="flex justify-center">
+              <div className="flex justify-center w-full">
                 <BackgroundBeams />
                 <div className="w-full h-full absolute top-0 left-0">
                   <div>
@@ -120,9 +120,10 @@ function ProjectsList() {
                   dragElastic={0.4}
                   whileDrag={{ cursor: "grabbing" }}
                   style={{
-                    width: 320,
-                    height: 208,
+                    width: 300,
+                    height: 210,
                     position: "absolute",
+                    
                   }}
                 >
                   <div

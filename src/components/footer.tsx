@@ -16,7 +16,7 @@ export default function Footer() {
   const theme = useThemeStore((state) => state.theme);
 
   return (
-    <footer className="relative mt-32 h-96 overflow-hidden ">
+    <footer className="relative mt-10 h-96 overflow-hidden ">
       <div className="absolute inset-0 pointer-events-none z-0">
         {[...Array(20)].map((_, i) => (
           <motion.div

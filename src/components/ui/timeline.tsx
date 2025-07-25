@@ -43,7 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               key={index}
               className="flex justify-start pb-20 md:gap-10 ltr:max-md:pl-16 rtl:max-md:pr-16 max-md:px-6"
             >
-              <div className="md:sticky hidden md:flex  flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+              <div className="md:sticky hidden md:flex md:flex-row  z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                 <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-primary border border-secondary dark:border-neutral-700 p-2" />
                 </div>

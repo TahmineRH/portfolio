@@ -25,10 +25,10 @@ export function ContactForm() {
 
     setLoading(true);
 
-    const name = (form.current.elements.namedItem("name") as HTMLInputElement)
-      .value;
-    const email = (form.current.elements.namedItem("email") as HTMLInputElement)
-      .value;
+    // const name = (form.current.elements.namedItem("name") as HTMLInputElement)
+    //   .value;
+    // const email = (form.current.elements.namedItem("email") as HTMLInputElement)
+    //   .value;
 
     emailjs
       .sendForm(
@@ -37,14 +37,14 @@ export function ContactForm() {
         form.current,
         "OYxw0XzQJ1YnGEJkm"
       )
-      .then(() => {
-        return emailjs.send(
-          "service_yjxq9pc",
-          "template_i2fxnms",
-          { name, email },
-          "OYxw0XzQJ1YnGEJkm"
-        );
-      })
+      // .then(() => {
+      //   return emailjs.send(
+      //     "service_yjxq9pc",
+      //     "template_i2fxnms",
+      //     { name, email },
+      //     "OYxw0XzQJ1YnGEJkm"
+      //   );
+      // })
       .then(() => {
         toast.success(t("contact.form.succes"));
         form.current?.reset();
