@@ -1,7 +1,7 @@
-import treeD from "@/assets/3d.png";
-import ai from "@/assets/AI.png";
-import hesamsanat from "@/assets/p1.png";
-import travel from "@/assets/travel.png";
+import ai from "@/assets/images/projects/ai/AI.webp";
+import treeD from "@/assets/images/projects/design-system/design-system.webp";
+import hesamsanat from "@/assets/images/projects/hesam/home.webp";
+import travel from "@/assets/images/projects/travel/travel.webp";
 import { ChevronRight, LinkIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
@@ -123,7 +123,7 @@ export default function ProjectCards() {
 
             <motion.div
               layoutId={`card-${activeCard.id}`}
-              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl max-md:w-sm max-md:h-[50vh] h-[80vh] rounded-xl shadow-2xl overflow-hidden"
+              className="fixed bg-background top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-3xl max-md:w-sm max-md:h-[30rem]  h-[80vh] rounded-xl shadow-2xl overflow-hidden"
               onClick={() => setActiveCard(null)}
             >
               <div className="relative w-full h-full px-12">

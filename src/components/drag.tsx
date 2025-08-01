@@ -3,7 +3,7 @@ import { MyPic } from "./home/my-pic";
 
 export default function Drag() {
   return (
-    <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80 max-md:h-108 max-md:w-96">
+    <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80">
       <motion.div
         drag="x"
         dragDirectionLock

@@ -1,19 +1,13 @@
-import cat from "@/assets/cat.png";
-import CVdark from "@/assets/icons/cv-dark.svg";
-import CV from "@/assets/icons/cv.svg";
-import GitHubdark from "@/assets/icons/github-dark.svg";
-import GitHub from "@/assets/icons/github.svg";
-import Instagramdark from "@/assets/icons/instagram-dark.svg";
-import Instagram from "@/assets/icons/instagram.svg";
+import cat from "@/assets/images/cat.webp";
 import { motion } from "framer-motion";
+import { Github } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { useThemeStore } from "../store/theme";
+import CV from "../assets/icons/cv";
+import Instagram from "../assets/icons/instagram";
 
 export default function Footer() {
   const { t } = useTranslation();
-
-  const theme = useThemeStore((state) => state.theme);
 
   return (
     <footer className="relative mt-10 h-96 overflow-hidden ">
@@ -40,7 +34,10 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          {t("footer.slogan")}
+          <span className="font-medium bg-opacity-50 bg-gradient-to-tr from-foreground from-5% via-foreground/50 via-70% to-95% to-foreground dark:from-foreground/10 dark:via-foreground dark:to-foreground/10  bg-clip-text text-center text-lg text-transparent ">
+            {t("footer.slogan")}
+          </span>
+          ☕
         </motion.p>
         <motion.p
           className="text-sm opacity-70 mb-12"
@@ -48,12 +45,10 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <div className="flex items-center justify-center gap-1">
-            <span className="transition-colors bg-gradient-to-r  from-foreground/[35%]  via-foreground/90 to-foreground/[35%] bg-na dark:from-neutral-300/[35%] dark:via-neutral-300/90  dark:to-neutral-300/[35%] bg-clip-text text-transparent">
-              {t("footer.footerNote")}
-            </span>
-            ✨
-          </div>
+          <span className="transition-colors bg-gradient-to-r  from-foreground/[35%]  via-foreground/90 to-foreground/[35%] bg-na dark:from-neutral-300/[35%] dark:via-neutral-300/90  dark:to-neutral-300/[35%] bg-clip-text text-transparent">
+            {t("footer.footerNote")}{" "}
+          </span>
+          ✨
         </motion.p>
         {/* ناوبری Cute */}
         <div className="flex justify-center gap-6 text-lg mb-8 font-semibold">
@@ -74,42 +69,25 @@ export default function Footer() {
         {/* Socials */}
         <div className="flex justify-center gap-6 text-xl">
           <a
-            href="https://github.com/yourname"
-            target="_blank"
-            className="hover:text-[#84594d] transition hover:scale-110 overflow-visible duration-300"
+            href="/resume.pdf"
+            download="resume"
+            className="transition hover:scale-110 overflow-visible duration-300"
           >
-            <img
-              src={theme === "light" ? GitHub : GitHubdark}
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-              className=" w-6 h-6 object-contain"
-              alt="GitHub"
-            />
+            <CV className="h-6 w-6 object-contain text-foreground dark:text-primary" />
           </a>
           <a
-            href="https://instagram.com/yourname"
+            href="https://github.com/TahmineRH"
             target="_blank"
-            className="hover:text-[#84594d] transition hover:scale-110 overflow-visible duration-300"
+            className="transition hover:scale-110 overflow-visible duration-300"
           >
-            <img
-              src={theme === "light" ? CV : CVdark}
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-              className=" w-6 h-6 object-cover"
-              alt="CV"
-            />
+            <Github className=" w-6 h-6 object-contain text-foreground dark:text-primary" />
           </a>
           <a
-            href="mailto:you@example.com"
-            className="hover:text-[#84594d] transition hover:scale-110 overflow-visible duration-300"
+            href="https://instagram.com/tahmine_rhb"
+            target="_blank"
+            className="transition hover:scale-110 overflow-visible duration-300"
           >
-            <img
-              src={theme === "light" ? Instagram : Instagramdark}
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-              className=" w-6 h-6 object-cover "
-              alt="Instagram"
-            />
+            <Instagram className="h-6 w-6 object-contain text-foreground dark:text-primary" />
           </a>
         </div>
       </div>

@@ -16,10 +16,16 @@ function Testimonials() {
         </h1>
       </div>
       <div className="flex flex-col gap-12  justify-center text-foreground/80">
-        <div className="flex justify-start gap-8">
-          <img src={quote} alt="Theme icon" className="w-12 h-12" />
+        <div className="flex justify-start gap-8 max-md:gap-4">
+          <img
+            src={quote}
+            alt="Theme icon"
+            className="w-12 h-12 max-md:w-8 max-md:h-8"
+          />
           <div>
-            <p className="mb-2 font-light">{t("Testimonials.arshia.testimonial")}</p>
+            <p className="mb-2 font-light">
+              {t("Testimonials.arshia.testimonial")}
+            </p>
             <span className="font-semibold text-lg">
               {t("Testimonials.arshia.name")}
             </span>{" "}
@@ -28,10 +34,16 @@ function Testimonials() {
             <span>{t("Testimonials.arshia.company")}</span>
           </div>
         </div>
-        <div className="flex justify-start gap-8">
-          <img src={quote} alt="Theme icon" className="w-12 h-12" />
+        <div className="flex justify-start gap-8 max-md:gap-4">
+          <img
+            src={quote}
+            alt="Theme icon"
+            className="w-12 h-12 max-md:w-8 max-md:h-8"
+          />
           <div>
-            <p className="mb-2 font-light">{t("Testimonials.alza.testimonial")}</p>
+            <p className="mb-2 font-light">
+              {t("Testimonials.alza.testimonial")}
+            </p>
             <span className="font-semibold text-lg">
               {t("Testimonials.alza.name")}
             </span>{" "}

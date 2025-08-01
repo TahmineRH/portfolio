@@ -1,36 +1,31 @@
-import CVdark from "@/assets/icons/cv-dark.svg";
-import CV from "@/assets/icons/cv.svg";
-import GitHubdark from "@/assets/icons/github-dark.svg";
-import GitHub from "@/assets/icons/github.svg";
-import Instagramdark from "@/assets/icons/instagram-dark.svg";
-import Instagram from "@/assets/icons/instagram.svg";
-import { useThemeStore } from "../../store/theme";
+import { Github } from "lucide-react";
+import CV from "../../assets/icons/cv";
+import Instagram from "../../assets/icons/instagram";
 
 export const SocialMedia = () => {
-  const theme = useThemeStore((state) => state.theme);
   return (
     <div className="flex gap-6 max-md:gap-4">
-      <img
-        src={theme === "light" ? GitHub : GitHubdark}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-6 h-6 object-contain max-md:w-5 max-md:h-5"
-        alt="GitHub"
-      />
-      <img
-        src={theme === "light" ? CV : CVdark}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-6 h-6 object-cover max-md:w-5 max-md:h-5"
-        alt="CV"
-      />
-      <img
-        src={theme === "light" ? Instagram : Instagramdark}
-        draggable={false}
-        onContextMenu={(e) => e.preventDefault()}
-        className="w-6 h-6 object-cover max-md:w-5 max-md:h-5"
-        alt="Instagram"
-      />
+      <a
+        href="/resume.pdf"
+        download="resume"
+        className="transition hover:scale-110 overflow-visible duration-300"
+      >
+        <CV className="h-6 w-6 max-md:w-5 max-md:h-5  object-contain text-foreground dark:text-primary" />
+      </a>
+      <a
+        href="https://github.com/TahmineRH"
+        target="_blank"
+        className="transition hover:scale-110 overflow-visible duration-300"
+      >
+        <Github className=" w-6 h-6 max-md:w-5 max-md:h-5 object-contain text-foreground dark:text-primary" />
+      </a>
+      <a
+        href="https://instagram.com/tahmine_rhb"
+        target="_blank"
+        className="transition hover:scale-110 overflow-visible duration-300"
+      >
+        <Instagram className="h-6 w-6 max-md:w-5 max-md:h-5  text-foreground dark:text-primary" />
+      </a>
     </div>
   );
 };

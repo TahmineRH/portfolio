@@ -1,7 +1,7 @@
-import childhood from "@/assets/me/newww.png";
-import programmer from "@/assets/me/programmer.png";
-import adolescence from "@/assets/me/teen2.png";
-import young from "@/assets/me/young.png";
+import childhood from "@/assets/me/childhood.webp";
+import programmer from "@/assets/me/programmer.webp";
+import adolescence from "@/assets/me/teen.webp";
+import young from "@/assets/me/young.webp";
 import { useTranslation } from "react-i18next";
 import { Timeline } from "../ui/timeline";
 
@@ -79,7 +79,7 @@ function TimelineJourney() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip max-md:-mt-28">
       <Timeline data={data} />
     </div>
   );

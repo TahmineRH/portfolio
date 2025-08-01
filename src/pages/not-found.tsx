@@ -1,4 +1,4 @@
-import Pic from "@/assets/images/4044.png";
+import Pic from "@/assets/images/4044.webp";
 import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -20,7 +20,7 @@ function NotFound() {
           {t("notFound.description")}
         </p>
         <Link to="/" className="w-full flex justify-center">
-          <Button className="flex items-center justify-center ">
+          <Button className="flex items-center justify-center w-fit">
             {t("notFound.buttonText")}{" "}
             <ChevronRight className="rtl:rotate-180" />
           </Button>

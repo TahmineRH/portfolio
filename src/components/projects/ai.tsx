@@ -1,11 +1,8 @@
-import ChallengDark from "@/assets/icons/challeng-dark.svg";
-import Challeng from "@/assets/icons/challeng.svg";
-import SolutionDark from "@/assets/icons/solution-dark.svg";
-import Solution from "@/assets/icons/sulotion.svg";
 import { LinkIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { useThemeStore } from "../../store/theme";
+import Challeng from "../../assets/icons/challeng";
+import Sulotion from "../../assets/icons/sulotion";
 import { Button } from "../ui/button";
 import AIDemo from "./demos/ai-demo";
 import SectionNav from "./section-nav";
@@ -15,8 +12,6 @@ function AI() {
   const { t } = useTranslation();
 
   const techIcons = useTechIcons();
-
-  const theme = useThemeStore((state) => state.theme);
 
   const tools = t("Projects.fourth.tools")
     .split(",")
@@ -96,23 +91,11 @@ function AI() {
                 {[...Array(5)].map((_, i) => (
                   <div className="flex flex-col gap-2" key={i}>
                     <li className="text-light flex items-center gap-2">
-                      <img
-                        src={theme === "light" ? Challeng : ChallengDark}
-                        draggable={false}
-                        onContextMenu={(e) => e.preventDefault()}
-                        className="w-5 h-5 object-contain max-md:w-5 max-md:h-5"
-                        alt="Challeng"
-                      />
+                      <Challeng className="h-5 w-5 text-foreground" />
                       {t(`Projects.fourth.chalenges.chalenge${i + 1}`)}
                     </li>
                     <li className="text-light flex items-baseline gap-2">
-                      <img
-                        src={theme === "light" ? Solution : SolutionDark}
-                        draggable={false}
-                        onContextMenu={(e) => e.preventDefault()}
-                        className="w-5 h-5 object-contain max-md:w-5 max-md:h-5"
-                        alt="CV"
-                      />
+                      <Sulotion className="h-5 w-5 text-foreground" />
                       {t(`Projects.fourth.chalenges.solution${i + 1}`)}
                     </li>
                   </div>

@@ -6,7 +6,7 @@ import {
   Mail,
   Settings,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../../lib/utils";
@@ -30,6 +30,8 @@ export default function Navbar() {
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (window.innerWidth < 768) return;
@@ -98,7 +100,10 @@ export default function Navbar() {
 
       {/* Mobile */}
       <div className="md:hidden fixed top-4 right-4 z-30">
-        <NavigationMenu dir={i18n.language === "fa" ? "rtl" : "ltr"}>
+        <NavigationMenu
+          dir={i18n.language === "fa" ? "rtl" : "ltr"}
+          ref={triggerRef}
+        >
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="rounded-lg bg-foreground/5 backdrop-blur-3xl px-4 py-2">
@@ -108,6 +113,9 @@ export default function Navbar() {
                 <div className="flex flex-col gap-3">
                   {navLinks.map((link) => (
                     <Link
+                      onTouchEnd={() => {
+                        triggerRef.current?.click();
+                      }}
                       key={link.path}
                       to={link.path}
                       className={cn(

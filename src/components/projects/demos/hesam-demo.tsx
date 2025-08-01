@@ -1,11 +1,11 @@
-import about from "@/assets/images/projects/hesam/about.png";
-import blogs from "@/assets/images/projects/hesam/blogs-min.gif";
-import catalog from "@/assets/images/projects/hesam/catalog.png";
-import contact from "@/assets/images/projects/hesam/contact-min.gif";
-import expo from "@/assets/images/projects/hesam/expos-min.gif";
-import home from "@/assets/images/projects/hesam/home-min.gif";
-import products from "@/assets/images/projects/hesam/products-min.gif";
-import projects from "@/assets/images/projects/hesam/projects-min.gif";
+import about from "@/assets/images/projects/hesam/about.webp";
+import blogs from "@/assets/images/projects/hesam/blogs-min.webp";
+import catalog from "@/assets/images/projects/hesam/catalog.webp";
+import contact from "@/assets/images/projects/hesam/contact-min.webp";
+import expo from "@/assets/images/projects/hesam/expos-min.webp";
+import home from "@/assets/images/projects/hesam/home-min.webp";
+import products from "@/assets/images/projects/hesam/products-min.webp";
+import projects from "@/assets/images/projects/hesam/projects-min.webp";
 
 const images = [
   { src: home, alt: "Home Page" },

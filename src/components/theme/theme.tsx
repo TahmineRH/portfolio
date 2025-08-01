@@ -1,5 +1,5 @@
-import moon from "@/assets/moon.svg";
-import sun from "@/assets/sun.svg";
+import moon from "@/assets/icons/moon.svg";
+import sun from "@/assets/icons/sun.svg";
 import { useEffect } from "react";
 import { useThemeStore } from "../../store/theme";
 
@@ -16,7 +16,7 @@ export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
     if (localTheme) {
       setTheme(localTheme, false);
     } else {
-      setTheme("dark", false); // 👈 اینجا دیفالت dark
+      setTheme("dark", false);
     }
   }, [setTheme]);
 

@@ -1,4 +1,4 @@
-import image from "@/assets/jase-bloor-oCZHIa1D4EU-unsplash.jpg";
+import image from "@/assets/images/jase-bloor-oCZHIa1D4EU-unsplash.webp";
 import { GlassDiv } from "liquid-glass-reactjs";
 import { Sparkles } from "lucide-react";
 import * as motion from "motion/react-client";
@@ -16,14 +16,10 @@ export default function LiquidGlassLive() {
         dragTransition={{ bounceStiffness: 1000, bounceDamping: 400 }}
         dragElastic={0.4}
         whileDrag={{ cursor: "grabbing" }}
-        style={{
-          width: 400,
-          height: 500,
-          position: "absolute",
-        }}
+        className="absolute h-[500px] w-full md:w-[400px]"
       >
         <div
-          className={` w-[400px] min-h-[500px] p-4 flex items-center justify-center transition-all duration-500`}
+          className={`max-md:w-full w-[400px] min-h-[500px] p-4 flex items-center justify-center transition-all duration-500`}
         >
           <GlassDiv className="rounded-3xl p-8 flex flex-col items-center justify-between h-full shadow-2xl gap-6">
             <div className="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center shadow-inner backdrop-blur-sm z-10">

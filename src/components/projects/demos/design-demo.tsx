@@ -1,15 +1,15 @@
-import create from "@/assets/images/projects/design-system/create-min.gif";
-import edit from "@/assets/images/projects/design-system/edit.png";
-import favorite from "@/assets/images/projects/design-system/favorite-min.gif";
-import home from "@/assets/images/projects/design-system/first-min.gif";
-import login from "@/assets/images/projects/design-system/login-min.gif";
-import order from "@/assets/images/projects/design-system/order-min.gif";
-import park from "@/assets/images/projects/design-system/park-min.gif";
-import partsAdmin from "@/assets/images/projects/design-system/parts-admin.png";
-import productAdmin from "@/assets/images/projects/design-system/product-admin.png";
-import productSildwalk from "@/assets/images/projects/design-system/product-sildwalk-min.gif";
-import street from "@/assets/images/projects/design-system/street-min.gif";
-import usersAdmin from "@/assets/images/projects/design-system/users-admin.png";
+import create from "@/assets/images/projects/design-system/create-min.webp";
+import edit from "@/assets/images/projects/design-system/edit.webp";
+import favorite from "@/assets/images/projects/design-system/favorite-min.webp";
+import home from "@/assets/images/projects/design-system/first-min.webp";
+import login from "@/assets/images/projects/design-system/login-min.webp";
+import order from "@/assets/images/projects/design-system/order-min.webp";
+import park from "@/assets/images/projects/design-system/park-min.webp";
+import partsAdmin from "@/assets/images/projects/design-system/parts-admin.webp";
+import productAdmin from "@/assets/images/projects/design-system/product-admin.webp";
+import productSildwalk from "@/assets/images/projects/design-system/product-sildwalk-min.webp";
+import street from "@/assets/images/projects/design-system/street-min.webp";
+import usersAdmin from "@/assets/images/projects/design-system/users-admin.webp";
 
 const images = [
   { src: login, alt: "Login Page" },

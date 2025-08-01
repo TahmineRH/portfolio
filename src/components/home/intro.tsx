@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Drag from "../drag";
 import { Button } from "../ui/button";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { MyPic } from "./my-pic";
 import { SocialMedia } from "./social-media";
 
 function Intro() {
@@ -32,8 +33,11 @@ function Intro() {
         </div>
         <SocialMedia />
       </div>
-      <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80  max-md:h-108 max-md:w-fit">
+      <div className="relative 2xl:w-96 2xl:h-96 h-80 w-80  max-md:hidden">
         <Drag />
+      </div>
+      <div className="md:hidden w-full">
+        <MyPic />
       </div>
     </div>
   );

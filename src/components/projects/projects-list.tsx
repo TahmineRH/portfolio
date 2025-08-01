@@ -1,7 +1,7 @@
-import AI from "@/assets/images/projects/ai/main.png";
-import design from "@/assets/images/projects/design-system/main.png";
-import hesamsanat from "@/assets/images/projects/hesam/main.png";
-import travel from "@/assets/images/projects/travel-main.png";
+import AI from "@/assets/images/projects/ai/main.webp";
+import design from "@/assets/images/projects/design-system/main.webp";
+import hesamsanat from "@/assets/images/projects/hesam/main.webp";
+import travel from "@/assets/images/projects/travel/travel-main.webp";
 import { GlassDiv } from "liquid-glass-reactjs";
 import { ChevronRight, Github, LinkIcon, Sparkles } from "lucide-react";
 import * as motion from "motion/react-client";

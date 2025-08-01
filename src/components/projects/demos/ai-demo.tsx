@@ -1,10 +1,10 @@
-import chat from "@/assets/images/projects/ai/chat.png";
-import home from "@/assets/images/projects/ai/home.gif";
-import list from "@/assets/images/projects/ai/list.png";
-import login from "@/assets/images/projects/ai/login.png";
-import menu from "@/assets/images/projects/ai/menu.png";
-import mockup from "@/assets/images/projects/ai/mockup.png";
-import plans from "@/assets/images/projects/ai/plans.png";
+import chat from "@/assets/images/projects/ai/chat.webp";
+import home from "@/assets/images/projects/ai/home.webp";
+import list from "@/assets/images/projects/ai/list.webp";
+import login from "@/assets/images/projects/ai/login.webp";
+import menu from "@/assets/images/projects/ai/menu.webp";
+import mockup from "@/assets/images/projects/ai/mockup.webp";
+import plans from "@/assets/images/projects/ai/plans.webp";
 
 const images = [
   { src: login, alt: "login Page" },
