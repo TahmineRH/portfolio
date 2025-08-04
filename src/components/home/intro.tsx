@@ -19,14 +19,11 @@ function Intro() {
           <TextGenerateEffect words={t("intro")} />
         </h1>
         <div className="flex gap-4">
-          <Button className="w-36 duration-500 hover:text-background bg-foreground/5 text-foreground ">
+          <Button className="w-36 duration-500 hover:text-card bg-foreground/5 text-foreground ">
             {t("projects")}
           </Button>
           <Link to="/about">
-            <Button
-              className="w-36 duration-500 hover:text-white bg-secondary/50 text-foreground"
-              variant={"secondary"}
-            >
+            <Button className="w-36 duration-500" variant={"secondary"}>
               {t("aboutButton")}
             </Button>
           </Link>

@@ -11,7 +11,7 @@ export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
   const { theme, setTheme, toggleTheme } = useThemeStore();
 
   useEffect(() => {
-    const localTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    const localTheme = localStorage.getItem("theme") as "dark" | "light" | null;
 
     if (localTheme) {
       setTheme(localTheme, false);
@@ -19,19 +19,6 @@ export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
       setTheme("dark", false);
     }
   }, [setTheme]);
-
-  // useEffect(() => {
-  //   const localTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-
-  //   if (localTheme) {
-  //     setTheme(localTheme, false);
-  //   } else {
-  //     const prefersDark = window.matchMedia(
-  //       "(prefers-color-scheme: dark)"
-  //     ).matches;
-  //     setTheme(prefersDark ? "dark" : "light", false);
-  //   }
-  // }, [setTheme]);
 
   if (variant === "switch") {
     return (
@@ -55,7 +42,6 @@ export default function ToggleTheme({ variant = "icon" }: ToggleThemeProps) {
     );
   }
 
-  // حالت آیکنی ساده
   return (
     <button
       onClick={toggleTheme}
