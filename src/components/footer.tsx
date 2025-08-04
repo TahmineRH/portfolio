@@ -70,7 +70,8 @@ export default function Footer() {
         <div className="flex justify-center gap-6 text-xl">
           <a
             href="/Tahmine-Rahbar-Resume.pdf"
-            download="Tahmine-Rahbar-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="transition hover:scale-110 overflow-visible duration-300"
           >
             <CV className="h-6 w-6 object-contain text-foreground dark:text-primary" />

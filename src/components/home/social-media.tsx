@@ -7,7 +7,8 @@ export const SocialMedia = () => {
     <div className="flex gap-6 max-md:gap-4">
       <a
         href="/Tahmine-Rahbar-Resume.pdf"
-        download="Tahmine-Rahbar-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         className="transition hover:scale-110 overflow-visible duration-300"
       >
         <CV className="h-6 w-6 max-md:w-5 max-md:h-5  object-contain text-foreground dark:text-primary" />
