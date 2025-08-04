@@ -69,8 +69,8 @@ export default function Footer() {
         {/* Socials */}
         <div className="flex justify-center gap-6 text-xl">
           <a
-            href="/resume.pdf"
-            download="resume"
+            href="/Tahmine-Rahbar-Resume.pdf"
+            download="Tahmine-Rahbar-Resume.pdf"
             className="transition hover:scale-110 overflow-visible duration-300"
           >
             <CV className="h-6 w-6 object-contain text-foreground dark:text-primary" />
